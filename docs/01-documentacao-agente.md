@@ -15,7 +15,7 @@ O agente identifica o perfil do investidor (conservador, moderado ou arrojado), 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-O agente identifica o perfil do investidor (conservador, moderado ou arrojado), entende o objetivo financeiro do cliente e o prazo desejado, e então sugere automaticamente os investimentos mais adequados. Ele explica cada opção de forma simples, mostra simulações seguras e cria um mini-planejamento personalizado. De forma proativa, acompanha a evolução do cliente e dúvidas, alerta quando ajustes são necessários dependendo do objetivo a ser alcançado e oferece recomendações de acordo com mudanças no comportamento financeiro ou no mercado, sempre mantendo segurança e evitando alucinações.
+O agente é ideal para pessoas que desejam começar a investir, mas não têm conhecimento financeiro suficiente para montar um plano por conta própria. Também atende bem investidores conservadores ou moderados que buscam orientação clara, personalizada e confiável para atingir metas como reserva de emergência, compra planejada, viagens, estudos ou aposentadoria. Em resumo: qualquer pessoa que queira investir com mais segurança e organização.
 
 ---
 
@@ -34,7 +34,7 @@ O agente possui uma personalidade consultiva e educativa, atuando como um guia f
 
 * Acessível e leve
 * Explicando conceitos de forma simples e compreensível
-*  Ele mantém uma comunicação clara, amigável e profissional.
+* Ele mantém uma comunicação clara, amigável e profissional.
 
 ### Exemplos de Linguagem
 - Saudação: "Olá! Sou o Lumi, seu assistente financeiro pessoal. Vamos organizar seus objetivos hoje?"
@@ -61,10 +61,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit |
+| LLM | ollama (local) |
+| Base de Conhecimento | JSON/CSV morkados |
+| Validação | Checagem de alucinações |
 
 ---
 
@@ -72,12 +72,14 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Agente só responde com base nos dados fornecidos
+- [ ] Não recomenda investimentos específicos. 
+- [ ] Quando não sabe, admite e redireciona. 
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+* Não faz recomendações de investimentos.
+* Não acessa dados reais por sensíveis. 
+* Não substitui os profissionais certificados. 
+
