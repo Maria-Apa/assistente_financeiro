@@ -20,7 +20,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Modifiquei o arquivo produtos_financeiros, adicionando algumas novas modalidades de investimentos, como Renda+, Educa+ Brasil, CDB de 6 meses e 1 ano, Fundos imobiliarios e de renda fixa. Esse produtos foram adicionadas para que fique mais completo o projeto e para que o assistente possa ter mais conhecimento dos produtos que ele poderá explicar. Além dessas informações, também adicionei a informação de resgate das modalidades de investimentos, para que as informações fiquem mais completas. 
+Modifiquei o arquivo produtos_financeiros, adicionando algumas novas modalidades de investimentos, como Renda+, Educa+, CDB de 6 meses e 1 ano e Fundos Imobiliários. Esses produtos adicionais foram adicionados para deixar o projeto mais completo e para que o assistente possa ter mais conhecimento dos produtos que ele poderá explicar. Além dessas informações, também acrescentei a informação de resgate das modalidades de investimento, para que as informações fiquem mais completas. 
 
 ---
 
