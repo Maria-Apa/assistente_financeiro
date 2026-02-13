@@ -76,8 +76,7 @@
     "rentabilidade": "Dividend Yield (DY), costuma girar entre 7% e 12% ao ano",
     "aporte_minimo": 100.00,
     "indicado_para": "Perfil moderado que busca diversificação e renda recorrente mensal",
-    "Data_conversão_cota": "D+6",
-    "Pagamento_resgate": "D+5"
+    "Pagamento_resgate": "Até D+5"
   },
   
   {
@@ -86,7 +85,8 @@
     "risco": "medio",
     "rentabilidade": "CDI + 2%",
     "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "indicado_para": "Perfil moderado que busca diversificação",
+    "Pagamento_resgate": "Até D+5"
   },
   
   {
@@ -96,5 +96,6 @@
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
     "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "Pagamento_resgate": "Até D+5"
   }
 ]
