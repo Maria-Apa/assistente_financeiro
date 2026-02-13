@@ -5,7 +5,8 @@
     "risco": "baixo",
     "rentabilidade": "100% da Selic",
     "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "indicado_para": "Reserva de emergência e iniciantes",
+    "resgate": "Dias úteis"
   },
 
     {
@@ -14,8 +15,8 @@
     "risco": "baixo",
     "rentabilidade": "IPCA + 7.26% a.a",
     "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra do Tesouro para a aposentadoria"
-    "resgate": "Pós 60 dias"
+    "indicado_para": "Renda Extra do Tesouro para a aposentadoria",
+    "resgate": "Após 60 dias"
   },
 
     {
@@ -24,8 +25,8 @@
     "risco": "baixo",
     "rentabilidade": "IPCA + 7.69% a.a",
     "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra do Tesouro para a aposentadoria"
-    "resgate": "Pós 60 dias"
+    "indicado_para": "Renda Extra usada para fins educacionais",
+    "resgate": "Após 60 dias"
   },
   
   {
@@ -42,20 +43,20 @@
     "nome": "CDB 6 meses",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "110% do CDI",
+    "rentabilidade": "108% do CDI",
     "aporte_minimo": 100.00,
     "indicado_para": "Quem busca guardar o dinheiro com segurança, mas sem retirar o valor antes do periodo de 6 meses",
-    "resgate": " No Vencimento"
+    "resgate": "No Vencimento"
   },
 
   {
     "nome": "CDB 1 ano",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "110% do CDI",
+    "rentabilidade": "112% do CDI",
     "aporte_minimo": 100.00,
     "indicado_para": "Quem busca guardar o dinheiro com segurança, mas sem retirar o valor antes do periodo de 12 meses",
-    "resgate": " No Vencimento"
+    "resgate": "No Vencimento"
   },
   
   {
@@ -64,16 +65,19 @@
     "risco": "baixo",
     "rentabilidade": "95% do CDI",
     "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "indicado_para": "Quem pode esperar 90 dias (isento de IR)",
+    "resgate": "Após 90 dias"
   },
 
     {
     "nome": "Fundo Imobiliario (FII)",
     "categoria": "fundo",
     "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "rentabilidade": "Dividend Yield (DY), costuma girar entre 7% e 12% ao ano",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Perfil moderado que busca diversificação e renda recorrente mensal",
+    "Data_conversão_cota": "D+6",
+    "Pagamento_resgate": "D+5"
   },
   
   {
