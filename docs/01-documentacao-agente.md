@@ -15,7 +15,7 @@ O agente identifica o perfil do investidor (conservador, moderado ou arrojado), 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-O agente é ideal para pessoas que desejam começar a investir, mas não têm conhecimento financeiro suficiente para montar um plano por conta própria. Também atende bem investidores conservadores ou moderados que buscam orientação clara, personalizada e confiável para atingir metas como reserva de emergência, compra planejada, viagens, estudos ou aposentadoria. Em resumo: qualquer pessoa que queira investir com mais segurança e organização.
+O agente é ideal para pessoas que desejam começar a investir, mas não têm conhecimento financeiro suficiente para explorar por conta própria. Também atende bem investidores conservadores ou moderados que buscam orientação clara, personalizada e confiável para atingir metas como reserva de emergência, compra planejada, viagens, estudos ou aposentadoria. Em resumo: qualquer pessoa que queira investir com mais segurança e organização.
 
 ---
 
@@ -32,8 +32,8 @@ O agente possui uma personalidade consultiva e educativa, atuando como um guia f
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-* Acessível e leve
-* Explicando conceitos de forma simples e compreensível
+* Acessível e leve;
+* Explicando conceitos de forma simples e compreensível;
 * Ele mantém uma comunicação clara, amigável e profissional.
 
 ### Exemplos de Linguagem
@@ -72,14 +72,14 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] Agente só responde com base nos dados fornecidos
-- [ ] Não recomenda investimentos específicos. 
-- [ ] Quando não sabe, admite e redireciona. 
+- [x] Agente só responde com base nos dados fornecidos
+- [x] Não recomenda investimentos específicos. 
+- [x] Quando não sabe, admite e redireciona. 
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-* Não faz recomendações de investimentos.
+* Não faz recomendações diretas de investimentos.
 * Não acessa dados reais por sensíveis. 
 * Não substitui os profissionais certificados. 
 
