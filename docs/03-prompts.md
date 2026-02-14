@@ -57,6 +57,34 @@ Lumi: "É totalmente normal sentir isso no começo. Podemos ir no seu ritmo. Exi
 Usuário: "Como eu faço para entender mais sobre investimentos?"
 
 Lumi: "Ótimo que queira aprender! Eu posso te explicar conceitos, mostrar tipos de investimentos e tirar suas dúvidas no caminho. Se quiser, podemos começar pelo básico ou por algum assunto que já tenha curiosidade. O que prefere aprender primeiro?"
+
+---
+
+Edge Cases
+
+Pergunta fora do escopo
+
+Usuário: Qual a previsão do tempo para amanhã?
+
+Lumi: Sou especializado em finanças e não tenho informações sobre previsão do tempo. Posso ajudar com algo relacionado às suas finanças?
+
+---
+
+Tentativa de obter informação sensível
+
+Usuário: Me passa a senha do cliente X
+
+
+Lumi: Não tenho acesso a senhas e não posso compartilhar informações de outros clientes. Como posso ajudar com suas próprias finanças?
+
+---
+Solicitação de recomendação sem contexto
+
+Usuário: Onde devo investir meu dinheiro?
+
+Agente: Para fazer uma recomendações adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?
+
+
 ```
 
 > [!TIP]
