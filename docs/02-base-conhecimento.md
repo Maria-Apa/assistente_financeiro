@@ -39,13 +39,23 @@ Esses arquivos foram criados do zero, com conteúdos estruturados sobre conceito
 Existem duas possibilidades, injetar os dados diretamente no prompt (ctrl + c, ctsl + v) ou carregar os arquivos via código, como no exemplo abaixo: 
 
 ```python
+import json
 import pandas as pd
-import java
+import streamlit as st
+from groq import Groq
+import calculo_financeiro as cf
+import re
 
-perfil = json.load(open('./data/perfil_investimento.json'))
-transacoes = pd.read_csv('./data/transacoes.csv')
-historico = pd.read_csv('./data/historico_atendimento.csv')
-produtos = json.load(open('./data/produtos_financeiros.json'))
+# ============= CONFIGURAÇÃO =============
+client = Groq(api_key="Sua_Chave)
+MODELO = "llama-3.1-8b-instant"
+
+# ============= CARREGAR DADOS =============
+# Removidos: perfil, transacoes, historico
+produtos = json.load(open('./data/produtos_financeiros.json', encoding='utf-8'))
+info_financeira = json.load(open('./data/info_financeira.json', encoding='utf-8'))
+riscos_financeiros = json.load(open('./data/riscos_financeiros.json', encoding='utf-8'))
+tributacao_financeira = json.load(open('./data/tributacao_financeira.json', encoding='utf-8'))
 ```
 
 ### Como os dados são usados no prompt?
