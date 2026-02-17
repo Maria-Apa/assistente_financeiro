@@ -18,16 +18,22 @@ python-dotenv
 ```
 ## Passo a Passo da Execução
 
-- Criar uma pasta "Lumi",
-- Baixar a pasta "Data",
-- Criar uma pasta "src",
-- Adicione no Lumi,
-- Crias uma conta no groq.com;
-- Acessar API Keys;
-- Clicar em "CREATE API KEY";
-- Copiar a Chave;
-- Adicionar na parte `client = Groq(api_key="SUA_CHAVE")` do código;
-
+- Crie uma pasta chamada "Lumi".
+- Dentro dela, crie a pasta "data" e coloque todos os arquivos .json.
+- Crie também a pasta "src" e coloque dentro dela o código do assistente (como app.py).
+- No site groq.com, crie uma conta.
+- Acesse o menu API Keys.
+- Clique em "CREATE API KEY".
+- Copie a chave gerada.
+- No código, substitua a linha:
+```
+client = Groq(api_key="SUA_CHAVE")
+```
+pela chave que você copiou.
+- No terminal, execute o comando para iniciar o Lumi:
+```
+streamlit run .\src\app.py
+```
 
 ## Como Rodar
 
