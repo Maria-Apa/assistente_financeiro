@@ -6,13 +6,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `perfil_investidor.json` | JSON | Identificar o perfil do investidor e orientar recomendações personalizadas |
+| `produtos_financeiros.json` | JSON | Listar e explicar produtos financeiros adequados ao perfil e objetivo do usuário |
+| `riscos_financeiros.json` | JSON | Apresentar os principais riscos associados a cada tipo de investimento |
+| `info_financeira.json` | JSON | Fornecer conceitos e informações financeiras de suporte para respostas mais claras |
+| `tributacao_financeira.json` | JSON | Explicar as regras de tributação aplicadas a cada produto financeiro |
 
 ---
 
@@ -20,7 +18,16 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Modifiquei o arquivo produtos_financeiros, adicionando algumas novas modalidades de investimentos, como Renda+, Educa+, CDB de 6 meses e 1 ano e Fundos Imobiliários. Esses produtos adicionais foram adicionados para deixar o projeto mais completo e para que o assistente possa ter mais conhecimento dos produtos que ele poderá explicar. Além dessas informações, também acrescentei a informação de resgate das modalidades de investimento, para que as informações fiquem mais completas. 
+Sim, eu expandi os dados mockados no sistema e realizei algumas modificações:
+
+* perfil_investidor.json <br>
+Adicionei perguntas para identificar o perfil do investidor (conservador, moderado ou arrojado). Essas perguntas permitem oferecer explicações e recomendações alinhadas aos objetivos do usuário.
+
+* produtos_financeiros.json <br>
+Ampliei a lista de investimentos, incluindo Tesouro Renda+ Aposentadoria, Tesouro Educa+, CDB de prazo fechado, Fundo Imobiliário (FII) e outros tipos de CDB. Também inseri informações complementares, como regras de resgate.
+
+* riscos_financeiros.json, info_financeira.json e tributacao_financeira.json <br>
+Esses arquivos foram criados do zero, com conteúdos estruturados sobre conceitos financeiros, visando aprimorar as explicações do assistente, reforçar a precisão das respostas e reduzir riscos de alucinação.
 
 ---
 
