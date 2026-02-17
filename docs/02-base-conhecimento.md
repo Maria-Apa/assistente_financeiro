@@ -517,19 +517,12 @@ No entanto, em soluções mais robustas, o ideal é que essas informações seja
 O exemplo de contexto montado abaixo, se baseia nos dados originais da base de conhecimento, mas os sintetiza deixando apenas as informações mais relevantes, otimizando assim o consumo de tokens. Entretanto, vale lembrar que mais importante do que economizar tokens, é ter todas as informações relevantes disponíveis em seu contexto. 
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+PERFIL:
+- Consrvador
+- Moderado
+- Arrojado
 
-RESUMO DE GASTOS: 
-- Moradia: R$ 1.380
-- Alimentação: R$ 570
-- Transporte: R$ 295
-- Saldo: R$ 188
-- Lazer: R$ 55,98
-- Total de saída: R$ 2.488,90
-
+PRODUTOS:
 - Tesouro Selic
 - Tesouro Renda+
 - Tesouro Educa+
@@ -540,4 +533,27 @@ RESUMO DE GASTOS:
 - Fundo Imobiliario (FII)
 - Fundo Multimercado
 - Fundo de Ações
+
+INFO:
+- CDI
+- SELIC
+- IPCA
+- Liquidez Diária
+- FCG
+- Fundo de Investimento
+- Administrador
+- Gestor
+
+RISCOS:
+- Mercado
+- Liquidez
+- Crédito
+- Vacancia
+
+TRIBUTAÇÃO:
+- IR
+- IOF
+- Fundo de Investimento
+
+
 ```
