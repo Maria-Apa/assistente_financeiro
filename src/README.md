@@ -47,7 +47,8 @@ streamlit run .\src\teste_final.py
 
 ## Evidência
 
-<img width="988" height="878" alt="image" src="https://github.com/user-attachments/assets/fb3b4d16-0e47-44fa-9ab7-5a751c4ef7a6" />
+<img width="1728" height="832" alt="image" src="https://github.com/user-attachments/assets/6242e2c7-ac6b-4cfe-b304-890a28056e60" />
+
 
 
 
