@@ -1,0 +1,133 @@
+{
+  "CDI": {
+    "nome": "Certificado de Depósito Interbancário",
+    "descricao": "O CDI é a taxa média das operações de empréstimo entre bancos. As instituições financeiras emprestam dinheiro entre si diariamente para fechar o caixa. No fim do dia, a média dessas operações determina a taxa CDI.",
+    "relacao_selic": "Se um banco não conseguir captar recursos no mercado interbancário, ele usa a taxa Selic Over como referência. Por isso, o CDI acompanha a Selic muito de perto.",
+    "usos": [
+      "Referência para investimentos de renda fixa",
+      "Cálculo de rendimento de CDBs, LCIs, LCAs e fundos DI",
+      "Indicador para operações interbancárias"
+    ]
+  },
+
+  "SELIC": {
+    "nome": "Sistema Especial de Liquidação e Custódia",
+    "descricao": "A taxa Selic é a taxa básica de juros da economia brasileira, definida pelo Banco Central.",
+    "funcao": "Serve como principal referência para todas as taxas de juros do país, influenciando crédito, financiamentos e investimentos.",
+    "tipos": [
+      "Selic Meta — definida pelo Copom",
+      "Selic Over — taxa efetiva das operações garantidas por títulos públicos"
+    ]
+  },
+
+  "IPCA":{
+    "nome": "Índice Nacional de Preços ao Consumidor Amplo",
+    "descricao": "é o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE desde 1979. Ele mede a variação de preços de produtos e serviços consumidos por famílias com rendimentos de 1 a 40 salários mínimos, abrangendo cerca de 90% da população urbana. É a referência para as metas de inflação do Banco Central. ",
+    "usos": [
+        "É a referência oficial utilizada pelo Conselho Monetário Nacional (CMN) para definir as metas de inflação que o Banco Central do Brasil deve seguir.",
+        "Serve como base para a correção anual de contratos, incluindo aluguéis, planos de saúde, mensalidades escolares e tarifas públicas.",
+        "É o indexador de títulos de renda fixa 'híbridos', como o Tesouro IPCA+, garantindo que o rendimento supere a inflação e mantenha o poder de compra.",
+        "Analistas e governos utilizam o IPCA para medir a saúde econômica do país e o impacto no custo de vida das famílias (com rendimentos de 1 a 40 salários mínimos). "
+    ]
+  },
+
+  "Liquidez_diaria": {
+    "descricao": "Liquidez diária, ou imediata, é a capacidade de resgatar um investimento a qualquer momento em dias úteis, com o dinheiro disponível na conta no mesmo dia (D+0) ou no próximo (D+1). É o ideal para reservas de emergência e objetivos de curto prazo, oferecendo alta segurança, flexibilidade e rentabilidade diária, sem carência. ",
+    "caracteristicas": [
+        "Resgate Rápido: Acesso ágil ao capital, sem necessidade de esperar vencimentos ou carências.",
+        "Ideal para Emergências: Perfeito para construir a reserva de emergência, permitindo uso imediato em imprevistos.",
+        "Rendimento: Diferente da conta corrente, o dinheiro continua rendendo proporcionalmente a cada dia, geralmente atrelado ao CDI. "
+    ]
+  },
+
+    "FGC":{
+        "nome": "Fundo Garantidor de Crédito",
+        "descricao": "O Fundo Garantidor de Créditos (FGC) é uma associação civil privada, sem fins lucrativos, que atua como um seguro para depositantes e investidores no Brasil. Ele protege até R$ 1 milhão, a cada 4 anos, em caso de falência ou intervenção do Banco Central em bancos associados. ",
+        "principais_aspectos": [
+            "Objetivo: Aumentar a confiança e estabilidade do Sistema Financeiro Nacional, protegendo correntistas e investidores.",
+            "Produtos Cobertos: Depósitos à vista (conta corrente), poupança, CDBs, RDBs, LC, LH, LCI, LCA e LCD.",
+            "Cobertura: R$ 250.000,00 por CPF ou CNPJ, por conjunto de instituições do mesmo conglomerado financeiro.",
+            "Funcionamento: Financiar a proteção através de contribuições mensais dos bancos associados, não utilizando recursos públicos.",
+            "Prazo de Pagamento: Geralmente ágil, com médias recentes reduzidas para poucos dias úteis após a lista de credores ser fornecida pelo interveniente. "
+        ]
+    },
+
+    "Fundo_de_investimento": {
+        "descricao": "Um fundo de investimento é uma forma coletiva de aplicação financeira, funcionando como um 'condomínio' onde diversos investidores (cotistas) unem recursos para aplicar em ativos como ações, renda fixa, imóveis ou câmbio. Geridos por profissionais, oferecem diversificação, praticidade e acesso a diferentes mercados, com rendimentos proporcionais às cotas possuídas.",
+        "caracteristicas": [
+            "Cotistas: Os investidores compram cotas, representando uma fração do patrimônio total.",
+            "Custos: Geralmente, cobram taxa de administração (gestão) e, em alguns casos, taxa de performance (para resultados acima do esperado).",
+            "Regulação: São fiscalizados pela Comissão de Valores Mobiliários (CVM). "
+        ],
+        "tipificacao":  [
+            "Renda fixa, Cambial, Multimercados, Ações, Incentivados em infraestrutura e Garantia de locação imobiliária, Fundo Imobiliário"
+        ],
+        "vantagem": "Diversificação imediata, gestão profissional, facilidade de acesso, liquidez (em fundos abertos) e diversificação de riscos.",
+        "custos": [
+            "Taxa de Administração: Taxa fixa, expressa em percentual ao ano, cobrada e deduzida diariamente do patrimônio líquido da classe. A cobrança de taxa de administração afeta o valor da cota. ",
+            "Taxa de entrada ou ingresso: taxa paga pelo cotista ao patrimônio da classe ao aplicar recursos em uma classe de cotas, pouco utilizada. ",
+            "Taxa de saída: taxa paga pelo cotista ao patrimônio da classe ao resgatar recursos de uma classe de cotas, também é pouco utilizada. ",
+            "Taxa de distribuição de cotas: taxa cobrada do fundo, representativa do montante total para remuneração dos distribuidores.",
+            "Taxa de gestão: taxa cobrada do fundo para remunerar o gestor e os prestadores de serviços por ele contratados e que não constituam encargos do fundo.",
+            "Taxa de performance: possibilidade de cobrança dessa taxa pelo gestor, percentual cobrado em razão do resultado positivo da classe. Só é cobrada quando o fundo tiver uma performance muito boa."
+        ],
+        "prestadores_de_servico": [
+            "Administrador",
+            "Gestor",
+            "Distribuidor",
+            "Tesouraria",
+            "Custodiante / Escriturador",
+            "Auditor independente"
+        ],
+        "fundo_imobiliario": {
+            "descricao": "Os Fundos Imobiliários (FII) são fundos de investimento fechados destinados à aplicação em empreendimentos imobiliários, o que inclui, além da aquisição de direitos reais sobre bens imóveis, o investimento em títulos relacionados ao mercado imobiliário como, por exemplo, LCI e CRI. ",
+            "caracteristicas": [
+                "São fundos fechados que podem ter duração determinada ou indeterminada",
+                "Objeto de oferta pública na emissão. Então, quando o FII vai emitir novas cotas, já que é um fundo fechado, passa por todo o processo de oferta pública (registro na CVM, consórcio de distribuição ...)",
+                "Pode ser negociado na bolsa de valores ou mercado de balcão."
+            ]
+        }
+        
+    },
+    
+    "Administrador": {
+        "descricao": "O administrador de fundos de investimento é a instituição responsável legalmente pela constituição, funcionamento, fiscalização e conformidade regulatória do fundo perante a CVM (Comissão de Valores Mobiliários, garantindo os direitos dos cotistas.",
+        "pode_contratar": [
+            "Serviço de Tesouraria (cuidar do caixa do fundo)",
+            "Escrituração de cotas (instituição que irá controlar o registro das cotas, também chamado de custodiante).",
+            "Auditoria independente: contratação obrigatória, irá fazer a auditoria das demonstrações contábeis do fundo."  
+        ],
+        "atribuicoes": [
+            "Supervisionar as operações realizadas pelo gestor, se está de acordo com a política de investimento da classe e dentro dos limites de concentração.",
+            "Gestão do risco de liquidez do fundo, que deve ser feita em conjunto com o gestor de recursos (anota isso aqui tá? É muito importante).",
+            "Observar as disposições constantes do regulamento.",
+            "Apreçamento dos ativos que compõem a carteira dos veículos de investimento.",
+            "Cumprir as deliberações da assembleia de cotistas. O administrador é quem administra o fundo, ele não é dono do fundo, portanto ele precisa seguir as regras.",
+            "Manter atualizada junto à CVM a lista de todos os prestadores de serviços contratados pelo fundo e as demais informações cadastrais do fundo e suas classes de cotas.",
+            "Diligenciar para que sejam mantidos, atualizados e em perfeita ordem: o registro de cotistas; o livro de atas das assembleias gerais; o livro ou lista de presença de cotistas; os pareceres do auditor independente e os registros contábeis referentes às operações e ao patrimônio do fundo.",
+            "O administrador é responsável por publicar, em seu site na internet, todas as informações relevantes do fundo de investimento."
+        ]
+    },
+
+    "Gestor": {
+        "descricao": "O gestor de fundos é o profissional responsável por administrar os recursos de terceiros em fundos de investimento, tomando decisões estratégicas de compra, venda e alocação de ativos (ações, renda fixa, imóveis) para maximizar retornos, seguindo o regulamento do fundo. Eles analisam o mercado, gerenciam riscos e definem a estratégia, seja ela ativa (bater o índice) ou passiva (replicar o índice). ",
+        "pode_contratar": [
+            "Distribuidor: responsável por vender as cotas do fundo de investimento a mercado.",
+            "Classificadora de risco: uma agência classificadora de risco irá classificar o risco do emissor de determinado título de crédito",
+            "Cogestão da carteira: contratar um outro gestor, sendo comum em fundos que possuem muitas classes de cotas. Então cada gestor cuida de uma classe de cotas por exemplo"
+        ],
+        "atribuicoes": [
+            "Responsável pela observância dos limites de composição e concentração de carteira e de concentração em fatores de risco.",
+            "Fornecer aos distribuidores todo o material de divulgação da classe de cotas.",
+            "Informar aos distribuidores qualquer alteração que ocorra na classe, especialmente se decorrente da mudança do regulamento",
+            "Comunicar a CVM o fechamento de cotas para resgate (sim, as vezes o fundo pode fechar para resgate. Mas veremos mais detalhes depois)",
+            "Exercer o direito de voto decorrente de ativos detidos pela classe. Por exemplo se o gestor comprou as ações da empresa T2SA3, na assembleia de acionista dessa empresa, o gestor pode votar representando o interesse do fundo.",
+            "Manter atualizada a documentação relativa às operações da classe de cotas",
+            "Gestão de risco dos veículos de investimento, incluindo, mas não se limitando, pela gestão do risco de liquidez em conjunto com o administrador fiduciário",
+            "Garantir que as operações realizadas pelos veículos de investimento (Fundo de Investimento) tenham sempre propósitos econômicos compatíveis com os documentos dos veículos de investimento, e estejam em consonância com os princípios gerais de conduta previstos no código de administração e gestão de recursos de terceiros da Anbima.",
+            "Manter a carteira de ativos enquadrada aos limites de composição e concentração e, se for o caso, de exposição ao risco de capital",
+            "Cumprir as deliberações da assembleia de cotistas"
+        ]
+    }
+  
+}
