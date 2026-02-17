@@ -1,0 +1,68 @@
+{
+    "Risco_de_Mercado":{
+        "descricao": "O risco de mercado é a possibilidade de perdas financeiras em investimentos devido à oscilação de preços e taxas no mercado, gerada pela volatilidade, eventos econômicos, políticos ou naturais.",
+        "caracteristicas_e_fatores": [
+            "Causas: Mudanças nas taxas de juros, variações cambiais, crises políticas, guerras e desastres naturais.",
+            "Impacto: Desvalorização de ativos (ex: ações caindo, título prefixado perdendo valor se juros subirem).",
+            "Gestão: Envolve definir limites de risco, diversificar carteiras e monitorar indicadores econômicos para minimizar perdas. ",
+            "Mensuração: Utiliza-se frequentemente o Value at Risk (VaR), que estima a perda máxima esperada em um determinado horizonte de tempo e confiança."
+        ],
+
+        "possuem_risco": [
+            "Fundos Imobiliários (FIIs): relacionado com a variação do preço das cotas.",
+            "Fundos de Investimento (Ações, Multimercado)",
+            "Renda Fixa"
+        ]
+    },
+    
+    "Risco_de_Liquidez":{
+        "descricao": "O Risco de Liquidez é a possibilidade de não conseguir vender um ativo financeiro rapidamente pelo seu preço justo, resultando em perdas financeiras ou necessidade de aceitar uma desvalorização para concretizar a venda. Ele afeta a capacidade de transformar investimentos em dinheiro e é comum em ativos de baixa negociação, como imóveis, ou resgates antecipados em renda fixa. ",
+        "principais_aspectos": [
+            "Definição: É a dificuldade de conversão de um ativo em dinheiro sem perda significativa de valor.",
+            "Impacto no preço: Ativos com alto risco de liquidez podem exigir grandes descontos (spreads altos) para serem vendidos rapidamente.",
+            "Exemplos de Baixa Liquidez: Imóveis, obras de arte, títulos de crédito privado de pequenas empresas ou ações de empresas pouco negociadas.",
+            "Exemplos de Alta Liquidez: Dinheiro em conta, tesouro direto, ações de grandes empresas (blue chips).",
+            "Risco de Financiamento: Refere-se à dificuldade de uma entidade cumprir suas obrigações de curto prazo por falta de caixa, mesmo que possua ativos." 
+        ],
+
+        "possuem_risco": [
+            "Renda Fixa com Prazo Fechado",
+            "Fundos Imobiliários (FIIs): as cotas dos FII são fechadas, não tem resgate. Mas, apesar de não ter resgate é possível encontrar liquidez no mercado e o risco está em encontrar compradores para as cotas quando quiser vender.",
+            "Fundos de Investimento Fechados",
+            "Fundo Multimercado"
+        ]
+    },
+
+    "Risco_de_Crédito":{
+        "descricao": "Risco de crédito (ou risco de calote) existe em investimentos onde o emissor pode não honrar o pagamento, sendo mais alto em ativos de renda fixa privada sem a garantia do Fundo Garantidor de Créditos (FGC).",
+        "principais_aspectos": [
+            "Gestão: Envolve originação, análise, monitoramento e cobrança para reduzir perdas.",
+            "Aplicação: Presente em empréstimos, financiamentos, vendas a prazo e investimentos de renda fixa.",
+            "Probabilidade de Inadimplência: Quanto maior o risco, maior a remuneração (spread) exigida para compensar o investidor."
+        ],
+
+        "possuem_risco": [
+            "Renda Fixa",
+            "Fundos de Crédito Privado",
+            "Fundos Imobiliários (FIIs): presente nos Fundos de Papel, o FII além de comprar imóveis também pode investir em papéis, como por exemplo, CRI, LCI, CCI, LIG, ou seja, ativos que estão atrelados ao mercado imobiliário.",
+            "Fundo Multimercado"
+        ]
+    },
+
+    "Risco_de_Vacância": {
+        "descricao": "O risco de vacância é a possibilidade de um imóvel ou portfólio imobiliário ficar desocupado, resultando em perda de receita de aluguel e custos de manutenção sem geração de renda. Ele é um indicador crucial para Fundos Imobiliários (FIIs), impactando diretamente a distribuição de dividendos e reduzindo o valor patrimonial dos ativos. ",
+        "pontos_chave": [
+            "Tipos: Existe a vacância física (área desocupada) e a vacância financeira (inadimplência ou contratos renegociados que geram menos renda), segundo Investidor10 e Toro Investimentos.",
+            "Impacto no Fluxo de Caixa: Imóveis vazios não geram aluguel, mas geram custos fixos (IPTU, condomínio, manutenção).",
+            "Consequências: Alta vacância reduz o lucro do investidor, baixa o valor do ativo e pode pressionar o preço do aluguel para baixo devido ao aumento da concorrência, conforme a ABECIP e a Empiricus.",
+            "Fatores de Risco: Localização ruim, má qualidade do ativo, cenários econômicos desfavoráveis e fim de contratos longos, apontam a Suno e o Ativore Asset. "
+        ],
+        
+        "possui_risco": [
+            "Fundo Multimercado",
+            "Fundo Imobiliario (FII)"
+        
+        ]
+    }
+
+}
