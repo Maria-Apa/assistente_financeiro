@@ -1,9 +1,10 @@
 import streamlit as st
 from core.agente import perguntar
 
-st.title("Lumi — Seu Assistente Financeiro 😊")
+st.title("Lumi — Seu Assistente Financeiro Educação 😊")
 
-if pergunta := st.chat_input("Pergunte algo sobre finanças ou perfis:"):
+pergunta = st.chat_input("Pergunte algo sobre finanças:")
+if pergunta:
     st.chat_message("user").write(pergunta)
 
     with st.spinner("Lumi está pensando..."):
