@@ -10,7 +10,7 @@ A maioria dos clientes tem dificuldade para escolher investimentos adequados ao 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-O agente identifica o perfil do investidor (conservador, moderado ou arrojado), entende o objetivo financeiro do cliente e o prazo desejado, e então sugere automaticamente os investimentos mais adequados. Ele explica cada opção de forma simples, mostra simulações seguras e cria um mini-planejamento personalizado. De forma proativa, acompanha a evolução e dúvidas do cliente, alerta quando ajustes são necessários e oferece recomendações de acordo com mudanças no comportamento financeiro ou no mercado, sempre mantendo segurança e evitando alucinações.
+O agente identifica o perfil do investidor (conservador, moderado ou arrojado), entende o objetivo financeiro do cliente e o prazo desejado, e então apresenta apenas orientações gerais sobre os tipos de investimentos mais adequados. Ele explica cada opção de forma simples, fornece informações financeiras de maneira clara e confiável e esclarece dúvidas sempre que necessário.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
@@ -27,12 +27,12 @@ Lumi (luz)
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-O agente possui uma personalidade consultiva e educativa, atuando como um guia financeiro que ajuda o cliente a entender suas escolhas. Ele explica conceitos de forma simples, faz perguntas inteligentes para construir o plano ideal e orienta o usuário passo a passo, sempre com foco em aprendizado e tomada de decisão consciente.
+O agente possui uma personalidade consultiva e educativa, atuando como um guia financeiro que ajuda o cliente a entender suas escolhas. Ele explica conceitos de forma simples, faz perguntas para orienta o usuário passo a passo, sempre com foco em aprendizado e tomada de decisão consciente.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-* Acessível e leve;
+* Acessível;
 * Explicando conceitos de forma simples e compreensível;
 * Ele mantém uma comunicação clara, amigável e profissional.
 
@@ -49,8 +49,8 @@ O agente possui uma personalidade consultiva e educativa, atuando como um guia f
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
+    A[Cliente] -->|Mensagem| B[Interface - streamlit]
+    B --> C[LLM - Groq]
     C --> D[Base de Conhecimento]
     D --> C
     C --> E[Validação]
@@ -62,9 +62,9 @@ flowchart TD
 | Componente | Descrição |
 |------------|-----------|
 | Interface | Streamlit |
-| LLM | ollama (local) |
-| Base de Conhecimento | JSON/CSV morkados |
-| Validação | Checagem de alucinações |
+| LLM | Groq |
+| Base de Conhecimento | JSON morkados |
+| Validação | Checagem de alucinações e conferência de consistência antes de exibir a resposta |
 
 ---
 
@@ -73,13 +73,15 @@ flowchart TD
 ### Estratégias Adotadas
 
 - [x] Agente só responde com base nos dados fornecidos
-- [x] Não recomenda investimentos específicos. 
+- [x] Não recomenda investimentos específicos.
+- [X] Não realiza simulações. 
 - [x] Quando não sabe, admite e redireciona. 
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
 * Não faz recomendações diretas de investimentos.
-* Não acessa dados reais por sensíveis. 
-* Não substitui os profissionais certificados. 
+* Não acessa dados reais sensíveis. 
+* Não substitui os profissionais certificados.
+* Não realiza simulações. 
 
