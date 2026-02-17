@@ -1,23 +1,70 @@
 {
-  "nome": "João Silva",
-  "idade": 32,
-  "profissao": "Analista de Sistemas",
-  "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
-  "aceita_risco": false,
-  "metas": [
+  "perfis": [
     {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
+      "id": "conservador",
+      "nome": "Conservador",
+      "descricao": "Prioriza segurança, estabilidade e preservação do patrimônio. Evita oscilações e prefere investimentos de baixo risco.",
+      "caracteristicas": [
+        "Baixa tolerância ao risco",
+        "Busca previsibilidade",
+        "Prefere liquidez",
+        "Aceita rendimentos menores para ter mais segurança"
+      ],
+      "investimentos_adequados": [
+        "CDB com liquidez diária",
+        "Tesouro Selic",
+        "LCI/LCA"
+      ],
+      "perguntas_diagnostico": [
+        "Qual sua tolerância a oscilações nos investimentos?",
+        "Quanto de segurança você considera importante?",
+        "Qual o seu objetivo principal: segurança ou rendimento?",
+        "Qual o seu horizonte de tempo para investir?"
+      ]
     },
     {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
-      "prazo": "2027-12"
+      "id": "moderado",
+      "nome": "Moderado",
+      "descricao": "Busca equilibrar segurança e rentabilidade. Aceita alguma oscilação para ter melhores retornos no médio prazo.",
+      "caracteristicas": [
+        "Tolerância intermediária ao risco",
+        "Busca equilíbrio entre segurança e retorno",
+        "Aceita volatilidade moderada",
+        "Foca em médio e longo prazo"
+      ],
+      "investimentos_adequados": [
+        "CDB de prazo fechado",
+        "Tesouro IPCA+",
+        "Fundos Multimercado leves"
+      ],
+      "perguntas_diagnostico": [
+        "Você aceita pequenas oscilações para buscar maiores retornos?",
+        "Seu objetivo é curto, médio ou longo prazo?",
+        "Qual porcentagem do patrimônio você está disposto a arriscar?",
+        "Você já investiu antes em algo além da poupança?"
+      ]
+    },
+    {
+      "id": "arrojado",
+      "nome": "Arrojado",
+      "descricao": "Focado em rentabilidade mais alta, aceita riscos maiores e oscilações fortes ao longo do caminho.",
+      "caracteristicas": [
+        "Alta tolerância ao risco",
+        "Busca retornos elevados",
+        "Aceita volatilidade intensa",
+        "Pensa no longo prazo"
+      ],
+      "investimentos_adequados": [
+        "Ações",
+        "FIIs",
+        "Fundos Multimercado"
+      ],
+      "perguntas_diagnostico": [
+        "Você está confortável com grandes oscilações no curto prazo?",
+        "Qual seu foco: crescimento forte do patrimônio ou estabilidade?",
+        "Você tem reserva de emergência formada?",
+        "Qual o prazo mínimo que você pretende manter os investimentos?"
+      ]
     }
   ]
 }
