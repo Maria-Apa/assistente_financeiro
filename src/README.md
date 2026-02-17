@@ -6,7 +6,7 @@ Esta pasta contém o código do seu agente financeiro.
 
 ```
 src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
+├── app.py              # Aplicação única
 ```
 
 ## Exemplo de requirements.txt
