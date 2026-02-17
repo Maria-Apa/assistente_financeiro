@@ -30,18 +30,18 @@ Crie testes simples para validar seu agente:
 
 ### Teste 2: Recomendação de produto
 - **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Solicita mais informações para que possa prosseguir. 
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
 - **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 - **Pergunta:** "Quanto qual o valo de um Bitcoin?"
 - **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [ ] Correto  [X] Incorreto
 
 ---
 
@@ -50,8 +50,12 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- O assistente consegue identificar 
+- O assistente identifica corretamente os tipos de investimentos presentes nos arquivos JSON.
+- Antes de apresentar sugestões, ele solicita mais informações sobre o perfil do usuário (como conservador, moderado ou arrojado).
+- Ele lida bem com perguntas fora do contexto financeiro, como previsão do tempo, informando que não possui essa informação.
 
 **O que pode melhorar:**
-- [Liste aqui]
+- O assistente ainda cria algumas informações que não estão na sua base de conhecimento.
+Por exemplo: ao ser questionado “Qual o valor de um Bitcoin?”, ele corretamente responde que não possui essa informação, mas em seguida começa a explicar o que é Bitcoin, mesmo sem haver dados sobre isso na base.
+
 
