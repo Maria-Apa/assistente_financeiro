@@ -38,7 +38,16 @@ Essa demonstração mostra que o assistente consegue responder utilizando apenas
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-[Sua descrição aqui]
+O diferencial do Lumi nasce de uma experiência real.
+Quando eu trabalhava com investimentos, percebia que muitos clientes tinham vergonha de tirar dúvidas por voz ou presencialmente. Eles ficavam inseguros, achavam que suas perguntas eram “básicas demais” e, por isso, preferiam pesquisar sozinhos — muitas vezes encontrando informações vagas ou incompletas.
+
+O Lumi resolve exatamente esse problema.
+
+Ele oferece um espaço seguro, simples e acolhedor para que qualquer pessoa possa aprender sobre investimentos sem medo de julgamento. Explica tudo com clareza, utiliza apenas informações confiáveis da base em JSON e responde de forma gentil, como uma conversa tranquila por chat.
+
+Com isso, o Lumi ajuda o usuário a entender o básico antes mesmo de procurar um profissional certificado. Assim, a pessoa chega mais preparada, mais confiante e com clareza sobre o que deseja — evitando produtos inadequados e traumas financeiros.
+
+O impacto na sociedade é direto: mais educação financeira, mais autonomia e menos medo de investir.
 
 ---
 
