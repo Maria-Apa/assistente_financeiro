@@ -2,38 +2,28 @@
  
 ## Roteiro Sugerido
 
+### Apresentação
+
+Olá, meu nome é Maria Aparecida, sou formada em Análise e Desenvolvimento de Sistemas e atualmente estou cursando uma pós-graduação em Análise de Dados e Business Intelligence. Também possuo certificação da ANBIMA.
+
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
 
-Um dos maiores desafios enfrentados pelos brasileiros hoje é a falta de conhecimento financeiro ao iniciar um investimento. Muitas pessoas buscam informações, mas encontram conteúdos vagos, confusos ou incompletos, que não explicam claramente para que serve cada produto ou como utilizá-lo.
+Meu projeto se baseia em uma experiência real que eu tive enquanto trabalhava com investimentos. Nesse período, eu percebi que muitos clientes se sentiam vergonha de entrar em contato com o setor por medo de fazer perguntas consideradas bobas ou simples.
 
-Como consequência, acabam escolhendo investimentos que não entendem, aderindo a produtos inadequados ao seu perfil ou objetivo. Isso frequentemente gera frustração, perdas e até traumas — levando muita gente a acreditar que investir é arriscado demais, que sempre resulta em prejuízo ou que “esse mercado não é para elas”.
+Com isso, eles acabavam buscando informações por conta própria e muitas vezes escolhiam investimentos inadequados ou que geravam alguma frustração ou insegurança quando eles iam verificar por fora.
 
 ### 2. A Solução (1 min)
 > Como seu agente resolve esse problema?
 
-Para resolver esse problema, desenvolvi um assistente virtual capaz de explicar, de forma simples e acessível, os conceitos básicos do sistema financeiro e os principais tipos de investimentos.
-
-Ele atende às dúvidas do usuário, sempre que necessário para apresentar opções de investimento, pergunta qual é o perfil do investidor e, caso o usuário não saiba, explica cada perfil de forma didática. A partir disso, ele apresenta categorias de investimentos adequadas aos objetivos informados, sem recomendar produtos específicos.
-
-O assistente utiliza uma base estruturada em arquivos JSON, que contém informações sobre produtos financeiros, riscos, tributação e conceitos essenciais. Assim, ele consegue responder dúvidas com precisão, evitando erros e garantindo explicações alinhadas ao conteúdo disponível.
+Pensando nisso, desenvolvi um assistente financeiro com o objetivo de orientar os clientes e apresentar opções de investimento acessíveis e adequadas ao seu perfil.
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
-Os arquivos da base de conhecimento foram organizados em cinco categorias: Informação Financeira, Perfil de Investidor, Produtos Financeiros, Riscos Financeiros e Tributação. Cada conjunto foi estruturado da forma mais clara possível para que o assistente consiga acessar esses dados, interpretar o contexto da pergunta e responder com precisão.
+No meu projeto, o assistente utiliza uma base de estrutura em arquivos JSON (lê-se: djêi-son), que contém informações sobre os produtos financeiros, riscos, tributação e conceitos essenciais de finanças.
 
-Para demonstrar o funcionamento, preparei algumas perguntas comuns:
-
-- Quando pergunto quais investimentos ele recomenda, o assistente primeiro informa que precisa saber qual é o perfil de investidor.
-Depois que essa informação é identificada, ele apresenta as categorias de produtos adequadas a esse perfil.
-
-- Se eu pergunto como posso diversificar meus investimentos, ele utiliza os dados dos arquivos para explicar as formas mais adequadas de diversificação, sempre dentro dos limites da base de conhecimento.
-
-- Também podemos testar como o agente reage a informações fora do escopo.
-Por exemplo, ao perguntar “Que dia é hoje?”, ele afirma que não possui acesso a esse tipo de dado — comportamento correto e seguro.
-
-Essa demonstração mostra que o assistente consegue responder utilizando apenas sua base interna, solicitar informações quando necessário e evitar alucinações.
+Assim, ele consegue responder às dúvidas com precisão, evitando erros e garantindo explicações alinhadas ao conteúdo disponível
 
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
@@ -53,16 +43,16 @@ O impacto na sociedade é direto: mais educação financeira, mais autonomia e m
 
 ## Checklist do Pitch
 
-- [ ] Duração máxima de 3 minutos
-- [ ] Problema claramente definido
-- [ ] Solução demonstrada na prática
-- [ ] Diferencial explicado
-- [ ] Áudio e vídeo com boa qualidade
+- [X] Duração máxima de 3 minutos
+- [X] Problema claramente definido
+- [X] Solução demonstrada na prática
+- [X] Diferencial explicado
+- [X] Áudio e vídeo com boa qualidade
 
 ---
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
+> Cole aqui o link do seu pitch (Google Drive)
 
-[Link do vídeo]
+[https://drive.google.com/file/d/19dAxBmLfN-Yub_anCMkzxEqmF5eLHQYl/view?usp=sharing
