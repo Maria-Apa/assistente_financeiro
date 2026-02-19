@@ -62,7 +62,7 @@ flowchart TD
 | Componente | Descrição |
 |------------|-----------|
 | Interface | Streamlit |
-| LLM | Groq |
+| LLM | OpenAI |
 | Base de Conhecimento | JSON morkados |
 | Validação | Checagem de alucinações e conferência de consistência antes de exibir a resposta |
 
