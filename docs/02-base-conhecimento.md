@@ -24,7 +24,7 @@ Sim, eu expandi os dados mockados no sistema e realizei algumas modificações:
 Adicionei perguntas para identificar o perfil do investidor (conservador, moderado ou arrojado). Essas perguntas permitem oferecer explicações e recomendações alinhadas aos objetivos do usuário.
 
 * produtos_financeiros.json <br>
-Ampliei a lista de investimentos, incluindo Tesouro Renda+ Aposentadoria, Tesouro Educa+, CDB de prazo fechado, Fundo Imobiliário (FII) e outros tipos de CDB. Também inseri informações complementares, como regras de resgate.
+Ampliei a lista de investimentos, incluindo Tesouro Renda+ Aposentadoria, Tesouro Educa+, Fundo Imobiliário (FII) e outros tipos de CDB. Também inseri informações complementares, como regras de resgate.
 
 * riscos_financeiros.json, info_financeira.json e tributacao_financeira.json <br>
 Esses arquivos foram criados do zero, com conteúdos estruturados sobre conceitos financeiros, visando aprimorar as explicações do assistente, reforçar a precisão das respostas e reduzir riscos de alucinação.
@@ -39,23 +39,23 @@ Esses arquivos foram criados do zero, com conteúdos estruturados sobre conceito
 Existem duas possibilidades, injetar os dados diretamente no prompt (ctrl + c, ctsl + v) ou carregar os arquivos via código, como no exemplo abaixo: 
 
 ```python
+# ============= IMPORTS =============
 import json
-import pandas as pd
 import streamlit as st
-from groq import Groq
-import calculo_financeiro as cf
+from openai import OpenAI
 import re
 
 # ============= CONFIGURAÇÃO =============
-client = Groq(api_key="Sua_Chave)
-MODELO = "llama-3.1-8b-instant"
+client = OpenAI(api_key="SUA_CHAVE")
+MODELO = "gpt-4.1-mini"  # você pode trocar para gpt-4.1-nano para pagar menos
 
 # ============= CARREGAR DADOS =============
-# Removidos: perfil, transacoes, historico
 produtos = json.load(open('./data/produtos_financeiros.json', encoding='utf-8'))
 info_financeira = json.load(open('./data/info_financeira.json', encoding='utf-8'))
 riscos_financeiros = json.load(open('./data/riscos_financeiros.json', encoding='utf-8'))
 tributacao_financeira = json.load(open('./data/tributacao_financeira.json', encoding='utf-8'))
+perfil_investidor = json.load(open('./data/perfil_investidor.json', encoding='utf-8'))
+
 ```
 
 ### Como os dados são usados no prompt?
@@ -527,8 +527,6 @@ PRODUTOS:
 - Tesouro Renda+
 - Tesouro Educa+
 - CDB Liquidez Diário
-- CDB 6 meses
-- CDB 1 ano
 - LCI/LCA
 - Fundo Imobiliario (FII)
 - Fundo Multimercado
