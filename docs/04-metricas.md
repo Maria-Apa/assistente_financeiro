@@ -56,6 +56,5 @@ Após os testes, registre suas conclusões:
 
 **O que pode melhorar:**
 - O assistente ainda cria algumas informações que não estão na sua base de conhecimento.
-Por exemplo: ao ser questionado “Qual o valor de um Bitcoin?”, ele corretamente responde que não possui essa informação, mas em seguida começa a explicar o que é Bitcoin, mesmo sem haver dados sobre isso na base.
-
+Por exemplo: ao ser questionado “Qual o valor de um Bitcoin?”, ele corretamente responde que não possui essa informação, mas em seguida fala que pode dar informações gerais sobre o investimento. 
 
