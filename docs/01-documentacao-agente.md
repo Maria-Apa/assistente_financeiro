@@ -50,7 +50,7 @@ O agente possui uma personalidade consultiva e educativa, atuando como um guia f
 ```mermaid
 flowchart TD
     A[Cliente] -->|Mensagem| B[Interface - streamlit]
-    B --> C[LLM - Groq]
+    B --> C[LLM - OpenAI]
     C --> D[Base de Conhecimento]
     D --> C
     C --> E[Validação]
