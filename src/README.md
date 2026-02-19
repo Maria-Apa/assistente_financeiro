@@ -13,7 +13,7 @@ src/
 
 ```
 streamlit
-groq
+OpenAI
 python-dotenv
 ```
 ## Passo a Passo da Execução
