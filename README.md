@@ -1,43 +1,58 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🌟 Lumi — Seu Assistente Financeiro Educativo
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+O Lumi é um agente inteligente desenvolvido para democratizar o acesso à educação financeira. Ele ajuda investidores iniciantes a identificar seu perfil, entender produtos financeiros e tirar dúvidas sem julgamentos, transformando o "medo de perguntar" em decisões conscientes.
+Ele possui capacidade para: 
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
+- **Orientar sobre investimentos** ao invés de apenas responder perguntas
+- **Personalizar** sugestões com base no contexto/perfil de cada cliente
 - **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
 
 ---
 
-## O Que Você Deve Entregar
+## O Problema
 
-### 1. Documentação do Agente
+Muitos clientes sentem vergonha de buscar orientação financeira por medo de fazer "perguntas bobas". Isso gera dois comportamentos perigosos:
 
-Defina **o que** seu agente faz e **como** ele funciona:
+- **Inércia:** O cliente deixa de investir por insegurança.
+- **Escolhas Erradas:** O cliente busca informações externas sem curadoria e acaba em produtos inadequados ao seu perfil de risco.
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+---
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+## A Solução
+
+O Lumi atua como um guia consultivo e educativo. Através de uma linguagem acolhedora e simples, ele:
+
+- Identifica se o usuário é Conservador, Moderado ou Arrojado.
+- Explica conceitos como CDI, SELIC, IPCA e Liquidez.
+- Apresenta categorias de investimentos (CDB, Tesouro, LCI/LCA, FIIs) baseadas estritamente em uma base de dados segura.
+
+---
+## Tecnologias Utilizadas
+
+## Ferramentas Utilizadas
+
+| Categoria | Ferramentas |
+|-----------|-------------|
+| **LLMs** | [ChatGPT](https://chat.openai.com/)|
+| **Desenvolvimento** | [Streamlit](https://streamlit.io/)|
+| **Diagramas** | [Mermaid](https://mermaid.js.org/)|
 
 ---
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Utilizei os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar meu agente:
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `info_financeira.json` | JSON | Histórico de transações do cliente |
+| `perfil_investidor.json` | JSON | Histórico de atendimentos anteriores |
+| `produtos_financeiros.json` | JSON | Perfil e preferências do cliente |
+| `riscos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `tributacao.json` | JSON | Produtos e serviços disponíveis |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
 
 📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
@@ -92,19 +107,6 @@ Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
 
 ---
 
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
 ## Estrutura do Repositório
 
 ```
@@ -113,10 +115,11 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 ├── 📄 README.md
 │
 ├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
+│   ├── info_financeira.json          # Informação Financeira
+│   ├── perfil_investidor.json        # Perfil do Investidor
+│   ├── produtos_financeiros.json     # Produtos Financeiros
+|   ├── riscos_financeiros.json       # Riscos Financeiros
+│   └── tributacao.json               # Tributação
 │
 ├── 📁 docs/                          # Documentação do projeto
 │   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
@@ -126,21 +129,11 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 │   └── 05-pitch.md                   # Roteiro do pitch
 │
 ├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
+│   └── app.py                        # Código em Python
 │
-├── 📁 assets/                        # Imagens e diagramas
+├── 📁 assets/                        # Imagens do Assistente
 │   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+└──  README.md
 ```
 
----
 
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
