@@ -1,60 +1,86 @@
 {
   "IR_Renda_Fixa":{
     "nome": "Imposto de Renda",
-    "descricao": "os investimentos de Renda Fixa são tributados com Imposto de Renda (IR), a cobrança desse tributo será feita conforme uma tabela regressiva",
+    "descricao": "Os investimentos de Renda Fixa são tributados com Imposto de Renda (IR), a cobrança desse tributo será feita conforme uma tabela regressiva.",
     "tabela": [
         "No período de até 180 dias a alíquota é 22,50%",
         "No período de 180 a 360 dias a alíquota é 20%",
         "No período de 361 a 700 dias a alíquota é 17,5%",
-        "No período acimda de 700 dias a alíquota é 15%"
+        "No período acima de 700 dias a alíquota é 15%"
         ],
-    "importante": "IR é cobrado sobre o rendimento líquido de IOF."
+    "importante": "O IR incide sobre o rendimento após o desconto do IOF, quando houver."
   },
 
   "IOF_Renda_Fixa":{
     "nome": "IMPOSTO SOBRE OPERAÇÕES FINANCEIRAS",
-    "descricao": "Os rendimentos obtidos em títulos de Renda Fixa, justamente por terem um prazo definido no momento do investimento, serão tributados com IR (imposto de renda) e IOF regressivo. No caso do IOF terá uma tabela que isenta o investidor a partir do 30º dia. Isto é, investimentos realizados com prazo de resgate inferior ou igual 30 dias serão tributados de acordo com Tabela Regressiva",
-    "tabela": [
-        { "dias": "1 a 6", "percentual": "96% a 80%" },
-        { "dias": "7 a 14", "percentual": "76% a 53%" },
-        { "dias": "15 a 20", "percentual": "50% a 33%" },
-        { "dias": "21 a 30", "percentual": "30% a 0%" }
+    "descricao": "Os rendimentos obtidos em títulos de Renda Fixa, justamente por terem um prazo definido no momento do investimento, serão tributados com IR (imposto de renda) e IOF regressivo. No caso do IOF terá uma tabela que isenta o investidor a partir do 30º dia. Isto é, investimentos realizados com prazo de resgate inferior ou igual 30 dias serão tributados de acordo com Tabela Regressiva.",
+    "tabela_completa": [
+      { "dia": 1,  "percentual": 96 },
+      { "dia": 2,  "percentual": 93 },
+      { "dia": 3,  "percentual": 90 },
+      { "dia": 4,  "percentual": 86 },
+      { "dia": 5,  "percentual": 83 },
+      { "dia": 6,  "percentual": 80 },
+      { "dia": 7,  "percentual": 76 },
+      { "dia": 8,  "percentual": 73 },
+      { "dia": 9,  "percentual": 70 },
+      { "dia": 10, "percentual": 66 },
+      { "dia": 11, "percentual": 63 },
+      { "dia": 12, "percentual": 60 },
+      { "dia": 13, "percentual": 56 },
+      { "dia": 14, "percentual": 53 },
+      { "dia": 15, "percentual": 50 },
+      { "dia": 16, "percentual": 46 },
+      { "dia": 17, "percentual": 43 },
+      { "dia": 18, "percentual": 40 },
+      { "dia": 19, "percentual": 36 },
+      { "dia": 20, "percentual": 33 },
+      { "dia": 21, "percentual": 30 },
+      { "dia": 22, "percentual": 26 },
+      { "dia": 23, "percentual": 23 },
+      { "dia": 24, "percentual": 20 },
+      { "dia": 25, "percentual": 16 },
+      { "dia": 26, "percentual": 13 },
+      { "dia": 27, "percentual": 10 },
+      { "dia": 28, "percentual": 6 },
+      { "dia": 29, "percentual": 3 },
+      { "dia": 30, "percentual": 0 }
     ]
     },
     
-   "tributacao_fundos_investimentos": {
+   "Tributacao_Fundos_Investimentos": {
     "descricao": "A tributação está relacionada com a tipificação. A receita federal reconhece que existem dois tipos de fundos.",
     "iof": [
-        "Fundos de renda fixa, cambial e multimercados estão sujeitos ao IOF de acordo com a tabela regressiva.",
+        "Fundos multimercados estão sujeitos ao IOF de acordo com a tabela regressiva.",
         "Fundo com carência tem alíquota de 0,5% ao dia de IOF caso o investidor resgate antes do vencimento da carência. "
         ],
         
     "aliquota_unica": [
-        "o fundo de infraestrutura, o investidor pessoa física está isento de IR e o investidor pessoa jurídica pagará uma alíquota de 15% no resgate.",
+        "O fundo de infraestrutura, o investidor pessoa física está isento de IR e o investidor pessoa jurídica pagará uma alíquota de 15% no resgate.",
         "O fundo de ações e o fundo de investimento em participações (private equity) são tributados com alíquota única de 15% no resgate. "
         ],
 
     "fundos_com_ir": {
         "curto_prazo": [
-            "prazo médio da carteira igual ou inferior a 365 dias. Sendo: Até 180 dias aliquota de 22,50% e acima de 180 dias a aliquota é 20%",
+            "Prazo médio da carteira igual ou inferior a 365 dias. Sendo: Até 180 dias aliquota de 22,50% e acima de 180 dias a aliquota é 20%.",
             "De acordo com a CVM, para ser classificado como fundo de curto prazo é necessário: Prazo médio da carteira inferior a 60 dias ou prazo máximo de vencimento do ativo inferior a 375 dias.",
             "Mas para fins de tributação, a receita federal considera que um fundo de curto prazo tem o prazo médio da carteira igual ou inferior a 365 dias. "
             ],
 
-        "longo_prazo": "prazo médio da carteira superior a 365 dias. Segue a tabela regressiva do IR.",
-        "Fundos": "Os fundos de renda fixa, cambial, multimercado e fundo de investimento em direitos creditórios, serão tributados de acordo com a tabela regressiva e o tempo de permanência do investidor"
+        "longo_prazo": "Prazo médio da carteira superior a 365 dias. Segue a tabela regressiva do IR.",
+        "Fundos": "Os fundos de renda fixa, cambial, multimercado e fundo de investimento em direitos creditórios, serão tributados de acordo com a tabela regressiva e o tempo de permanência do investidor."
         },
 
     "come_cotas": [
         "Come-cotas é o nome que se dá para uma antecipação no recolhimento do Imposto de Renda em classes de cotas de renda fixa, cambial e multimercados do tipo aberto. Em outras palavras, o fundo de investimento recolhe o IR da valorização das cotas a cada 6 meses, independentemente do resgate.",
         "Será cobrada sempre nos últimos dias úteis de maio e novembro.",
-        "Será cobrada SEMPRE uma alíquota fixa (classe de curto prazo, 20%; classe de longo prazo, 15%)",
+        "Será cobrada SEMPRE uma alíquota fixa (classe de curto prazo, 20%; classe de longo prazo, 15%).",
         "Recolhida pelo administrador",
         "Exceção: Classes de cota que têm carência para resgate maior que 90 dias o come cotas será cobrado no vencimento da carência. "
         ],
     
     "fundo_imobiliario": [
-        "Ganho de capital: 20% para PF, PJ e até mesmo para PJ isento. Recolhido pelo próprio investidor via DARF. O investidor terá até o último dia útil do mês subsequente para realizar o recolhimento",
+        "Ganho de capital: A alíquota é de 20% para pessoa física, pessoa jurídica e até para PJ isenta. O imposto deve ser recolhido pelo próprio investidor via DARF, até o último dia útil do mês subsequente ao da operação.",
         "Rendimento (dividendo): isento de IR para PF, PJ é 20%, retido na fonte. "
         ]
     }
