@@ -5,7 +5,7 @@ from openai import OpenAI
 import re
 
 # ============= CONFIGURAÇÃO =============
-client = OpenAI(api_key="SUA_CHAVE"  # você pode trocar para gpt-4.1-nano para pagar menos
+client = OpenAI(api_key="SUA_CHAVE")  
 
 # ============= CARREGAR DADOS =============
 produtos = json.load(open('./data/produtos_financeiros.json', encoding='utf-8'))
