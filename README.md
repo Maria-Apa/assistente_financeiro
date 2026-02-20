@@ -45,7 +45,8 @@ O Lumi atua como um guia consultivo e educativo. Através de uma linguagem acolh
 
 O projeto utiliza uma estrutura de RAG (Retrieval-Augmented Generation) simplificada, onde o contexto é injetado dinamicamente no prompt com base na intenção do usuário.
 
-```flowchart TD
+```mermaid
+
     A[Cliente] -->|Pergunta via Chat| B[Interface - Streamlit]
     B --> C{Filtro de Contexto}
     C -->|Carrega JSONs| D[Base de Conhecimento]
