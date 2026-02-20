@@ -65,6 +65,144 @@ Para simplificar, os dados podem ser injetados diretamente no system prompt, gar
 No entanto, em soluções mais robustas, o ideal é que essas informações sejam carregadas dinamicamente via código, permitindo maior flexibilidade, atualização fácil dos arquivos JSON e redução do tamanho do prompt.
 
 ```text
+
+========= INFORMAÇÕES FINANCEIRAS info_financeira.json: =========
+
+{
+  "CDI": {
+    "nome": "Certificado de Depósito Interbancário",
+    "descricao": "O CDI é a taxa média das operações de empréstimo entre bancos. As instituições financeiras emprestam dinheiro entre si diariamente para fechar o caixa. No fim do dia, a média dessas operações determina a taxa CDI.",
+    "relacao_selic": "Se um banco não conseguir captar recursos no mercado interbancário, ele usa a taxa Selic Over como referência. Por isso, o CDI acompanha a Selic muito de perto.",
+    "usos": [
+      "Referência para investimentos de renda fixa",
+      "Cálculo de rendimento de CDBs, LCIs, LCAs e fundos DI",
+      "Indicador para operações interbancárias"
+    ]
+  },
+
+  "SELIC": {
+    "nome": "Sistema Especial de Liquidação e Custódia",
+    "descricao": "A taxa Selic é a taxa básica de juros da economia brasileira, definida pelo Banco Central.",
+    "funcao": "Serve como principal referência para todas as taxas de juros do país, influenciando crédito, financiamentos e investimentos.",
+    "tipos": [
+      "Selic Meta — definida pelo Copom",
+      "Selic Over — taxa efetiva das operações garantidas por títulos públicos"
+    ]
+  },
+
+  "IPCA":{
+    "nome": "Índice Nacional de Preços ao Consumidor Amplo",
+    "descricao": "É o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE desde 1979. Ele mede a variação de preços de produtos e serviços consumidos por famílias com rendimentos de 1 a 40 salários mínimos, abrangendo cerca de 90% da população urbana. É a referência para as metas de inflação do Banco Central. ",
+    "usos": [
+        "É a referência oficial utilizada pelo Conselho Monetário Nacional (CMN) para definir as metas de inflação que o Banco Central do Brasil deve seguir.",
+        "Serve como base para a correção anual de contratos, incluindo aluguéis, planos de saúde, mensalidades escolares e tarifas públicas.",
+        "É o indexador de títulos de renda fixa 'híbridos', como o Tesouro IPCA+, garantindo que o rendimento supere a inflação e mantenha o poder de compra.",
+        "Analistas e governos utilizam o IPCA para medir a saúde econômica do país e o impacto no custo de vida das famílias (com rendimentos de 1 a 40 salários mínimos). "
+    ]
+  },
+
+  "Liquidez_diaria": {
+    "descricao": "Liquidez diária, ou imediata, é a capacidade de resgatar um investimento a qualquer momento ou dias úteis, dependendo da instituição, com o dinheiro disponível na conta no mesmo dia (D+0) ou no próximo (D+1). É o ideal para reservas de emergência e objetivos de curto prazo, oferecendo alta segurança, flexibilidade e rentabilidade diária, sem carência. ",
+    "caracteristicas": [
+        "Resgate Rápido: Acesso ágil ao capital, sem necessidade de esperar vencimentos ou carências.",
+        "Ideal para Emergências: Perfeito para construir a reserva de emergência, permitindo uso imediato em imprevistos.",
+        "Rendimento: Diferente da conta corrente, o dinheiro continua rendendo proporcionalmente a cada dia, geralmente atrelado ao CDI. ",
+        "Alguns produtos possuem liquidez diária mas com prazo de cotização, especialmente fundos."
+    ]
+  },
+
+    "FGC":{
+        "nome": "Fundo Garantidor de Crédito",
+        "descricao": "O Fundo Garantidor de Créditos (FGC) é uma associação civil privada, sem fins lucrativos, que atua como um seguro para depositantes e investidores no Brasil. Ele protege até R$ 1 milhão, a cada 4 anos, em caso de falência ou intervenção do Banco Central em bancos associados. ",
+        "principais_aspectos": [
+            "Objetivo: Aumentar a confiança e estabilidade do Sistema Financeiro Nacional, protegendo correntistas e investidores.",
+            "Produtos Cobertos: Depósitos à vista (conta corrente), CDBs, LCI LCA.",
+            "Cobertura: R$ 250.000,00 por CPF ou CNPJ, por conjunto de instituições do mesmo conglomerado financeiro.",
+            "Funcionamento: Financiar a proteção através de contribuições mensais dos bancos associados, não utilizando recursos públicos.",
+            "Prazo de Pagamento: Geralmente ágil, com médias recentes reduzidas para poucos dias úteis após a lista de credores ser fornecida pelo interveniente. "
+        ]
+    },
+
+    "Fundo_de_investimento": {
+        "descricao": "Um fundo de investimento é uma forma coletiva de aplicação financeira, funcionando como um 'condomínio' onde diversos investidores (cotistas) unem recursos para aplicar em ativos como ações, renda fixa, imóveis ou câmbio. Geridos por profissionais, oferecem diversificação, praticidade e acesso a diferentes mercados, com rendimentos proporcionais às cotas possuídas.",
+        "caracteristicas": [
+            "Cotistas: Os investidores compram cotas, representando uma fração do patrimônio total.",
+            "Custos: Geralmente, cobram taxa de administração (gestão) e, em alguns casos, taxa de performance (para resultados acima do esperado).",
+            "Regulação: São fiscalizados pela Comissão de Valores Mobiliários (CVM). "
+        ],
+        "tipificacao":  [
+            "Renda fixa, Cambial, Multimercados, Ações, Incentivados em infraestrutura e Garantia de locação imobiliária, Fundo Imobiliário"
+        ],
+        "vantagem": "Diversificação imediata, gestão profissional, facilidade de acesso, liquidez (em fundos abertos) e diversificação de riscos.",
+        "custos": [
+            "Taxa de Administração: Taxa fixa, expressa em percentual ao ano, cobrada e deduzida diariamente do patrimônio líquido da classe. A cobrança de taxa de administração afeta o valor da cota. ",
+            "Taxa de entrada ou ingresso: taxa paga pelo cotista ao patrimônio da classe ao aplicar recursos em uma classe de cotas, pouco utilizada. ",
+            "Taxa de saída: taxa paga pelo cotista ao patrimônio da classe ao resgatar recursos de uma classe de cotas, também é pouco utilizada. ",
+            "Taxa de distribuição de cotas: taxa cobrada do fundo, representativa do montante total para remuneração dos distribuidores.",
+            "Taxa de gestão: taxa cobrada do fundo para remunerar o gestor e os prestadores de serviços por ele contratados e que não constituam encargos do fundo.",
+            "Taxa de performance: possibilidade de cobrança dessa taxa pelo gestor, percentual cobrado em razão do resultado positivo da classe. Só é cobrada quando o fundo tiver uma performance muito boa."
+        ],
+        "prestadores_de_servico": [
+            "Administrador",
+            "Gestor",
+            "Distribuidor",
+            "Tesouraria",
+            "Custodiante / Escriturador",
+            "Auditor independente"
+        ],
+        "fundo_imobiliario": {
+            "descricao": "Os Fundos Imobiliários (FII) são fundos de investimento fechados destinados à aplicação em empreendimentos imobiliários, o que inclui, além da aquisição de direitos reais sobre bens imóveis, o investimento em títulos relacionados ao mercado imobiliário como, por exemplo, LCI e CRI. ",
+            "caracteristicas": [
+                "São fundos fechados que podem ter duração determinada ou indeterminada",
+                "Objeto de oferta pública na emissão. Então, quando o FII vai emitir novas cotas, já que é um fundo fechado, passa por todo o processo de oferta pública (registro na CVM, consórcio de distribuição ...)",
+                "Pode ser negociado na bolsa de valores ou mercado de balcão."
+            ]
+        }
+        
+    },
+    
+    "Administrador": {
+        "descricao": "O administrador de fundos de investimento é a instituição responsável legalmente pela constituição, funcionamento, fiscalização e conformidade regulatória do fundo perante a CVM (Comissão de Valores Mobiliários, garantindo os direitos dos cotistas.",
+        "pode_contratar": [
+            "Serviço de Tesouraria (cuidar do caixa do fundo)",
+            "Escrituração de cotas (instituição que irá controlar o registro das cotas, também chamado de custodiante).",
+            "Auditoria independente: contratação obrigatória, irá fazer a auditoria das demonstrações contábeis do fundo."  
+        ],
+        "atribuicoes": [
+            "Supervisionar as operações realizadas pelo gestor, se está de acordo com a política de investimento da classe e dentro dos limites de concentração.",
+            "Gestão do risco de liquidez do fundo, que deve ser feita em conjunto com o gestor de recursos (anota isso aqui tá? É muito importante).",
+            "Observar as disposições constantes do regulamento.",
+            "Apreçamento dos ativos que compõem a carteira dos veículos de investimento.",
+            "Cumprir as deliberações da assembleia de cotistas. O administrador é quem administra o fundo, ele não é dono do fundo, portanto ele precisa seguir as regras.",
+            "Manter atualizada junto à CVM a lista de todos os prestadores de serviços contratados pelo fundo e as demais informações cadastrais do fundo e suas classes de cotas.",
+            "Diligenciar para que sejam mantidos, atualizados e em perfeita ordem: o registro de cotistas; o livro de atas das assembleias gerais; o livro ou lista de presença de cotistas; os pareceres do auditor independente e os registros contábeis referentes às operações e ao patrimônio do fundo.",
+            "O administrador é responsável por publicar, em seu site na internet, todas as informações relevantes do fundo de investimento."
+        ]
+    },
+
+    "Gestor": {
+        "descricao": "O gestor de fundos é o profissional responsável por administrar os recursos de terceiros em fundos de investimento, tomando decisões estratégicas de compra, venda e alocação de ativos (ações, renda fixa, imóveis) para maximizar retornos, seguindo o regulamento do fundo. Eles analisam o mercado, gerenciam riscos e definem a estratégia, seja ela ativa (bater o índice) ou passiva (replicar o índice). ",
+        "pode_contratar": [
+            "Distribuidor: responsável por vender as cotas do fundo de investimento a mercado.",
+            "Classificadora de risco: uma agência classificadora de risco irá classificar o risco do emissor de determinado título de crédito",
+            "Cogestão da carteira: contratar um outro gestor, sendo comum em fundos que possuem muitas classes de cotas. Então cada gestor cuida de uma classe de cotas por exemplo"
+        ],
+        "atribuicoes": [
+            "Responsável pela observância dos limites de composição e concentração de carteira e de concentração em fatores de risco.",
+            "Fornecer aos distribuidores todo o material de divulgação da classe de cotas.",
+            "Informar aos distribuidores qualquer alteração que ocorra na classe, especialmente se decorrente da mudança do regulamento",
+            "Comunicar a CVM o fechamento de cotas para resgate (sim, as vezes o fundo pode fechar para resgate. Mas veremos mais detalhes depois)",
+            "Exercer o direito de voto decorrente de ativos detidos pela classe. Por exemplo se o gestor comprou as ações da empresa T2SA3, na assembleia de acionista dessa empresa, o gestor pode votar representando o interesse do fundo.",
+            "Manter atualizada a documentação relativa às operações da classe de cotas",
+            "Gestão de risco dos veículos de investimento, incluindo, mas não se limitando, pela gestão do risco de liquidez em conjunto com o administrador fiduciário",
+            "Garantir que as operações realizadas pelos veículos de investimento (Fundo de Investimento) tenham sempre propósitos econômicos compatíveis com os documentos dos veículos de investimento, e estejam em consonância com os princípios gerais de conduta previstos no código de administração e gestão de recursos de terceiros da Anbima.",
+            "Manter a carteira de ativos enquadrada aos limites de composição e concentração e, se for o caso, de exposição ao risco de capital",
+            "Cumprir as deliberações da assembleia de cotistas"
+        ]
+    }
+  
+}
+
 ========= PERFIL INVESTIDOR perfil_investidor.json: =========
 {
   "perfis": [
@@ -141,36 +279,40 @@ No entanto, em soluções mais robustas, o ideal é que essas informações seja
 
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes",
-    "resgate": "Liquidez Diária"
-  },
-
+  "Tesouro Direto": [
     {
-    "nome": "Tesouro Renda+ Aposentadoria",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "IPCA + 7.26% a.a",
-    "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra do Tesouro para a aposentadoria",
-    "resgate": "Após 60 dias"
-  },
-
+      "nome": "Tesouro Selic",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "100% da Selic",
+      "aporte_minimo": 30.00,
+      "indicado_para": "Reserva de emergência e iniciantes",
+      "resgate": "Liquidez diária"
+    },
     {
-    "nome": "Tesouro Educa+",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "IPCA + 7.69% a.a",
-    "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra usada para fins educacionais",
-    "resgate": "Após 60 dias"
-  },
+      "nome": "Tesouro Renda+ Aposentadoria",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "IPCA + 7.26% a.a",
+      "aporte_minimo": 18.97,
+      "indicado_para": "Reserva para quem busca guardar dinheiro para aposentadoria",
+      "resgate": "Após 60 dias"
+    },
+    {
+      "nome": "Tesouro Educa+",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "IPCA + 7.69% a.a",
+      "aporte_minimo": 18.97,
+      "indicado_para": "Reserva para quem busca guardar dinheiro para fins educacionais",
+      "resgate": "Após 60 dias"
+    }
+  ]
+ },
   
-  {
+ {
+  "CDBs": [
+        {
     "nome": "CDB (Certificado de Depósito Bancário) Liquidez Diária",
     "categoria": "renda_fixa",
     "risco": "baixo",
@@ -178,20 +320,32 @@ No entanto, em soluções mais robustas, o ideal é que essas informações seja
     "aporte_minimo": 10.00,
     "indicado_para": "Quem busca segurança com rendimento diário",
     "resgate": "Liquidez Diária"
-  },
+   }, 
 
+   {
+    "nome":"CDB (Certificado de Depósito Bancário) 6 meses",
+    "categoria": "renda_fixa",
+    "risco":"baixo",
+    "rentabilidade":"108% do CDI (Certificado de Depósito Interbancário)",
+    "aporte_minimo": 100.00,
+    "indicado_para":"Quem busca retabilidade e guardar o dinheiro sem retirar antes do prazo",
+    "resgate": "No vencimento"
+  
+  },
 
   {
-    "nome": "CDB (Certificado de Depósito Bancário) prazo fechado 1 ano",
+    "nome":"CDB (Certificado de Depósito Bancário) 1 ano",
     "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "112% do CDI (Certificado de Depósito Interbancário)",
+    "risco":"baixo",
+    "rentabilidade":"114% do CDI (Certificado de Depósito Interbancário)",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca guardar o dinheiro com segurança, mas sem retirar o valor antes do periodo de 12 meses",
-    "resgate": "No Vencimento, prazo fechado"
+    "indicado_para":"Quem busca retabilidade e guardar o dinheiro sem retirar antes do prazo",
+    "resgate": "No vencimento"
+  }
+   ]
 
-  },
-  
+ },
+
   {
     "nome": "LCI/LCA",
     "categoria": "renda_fixa",
@@ -296,215 +450,104 @@ No entanto, em soluções mais robustas, o ideal é que essas informações seja
         ],
         
         "possui_risco": [
-            "Fundo Multimercado",
-            "Fundo Imobiliario (FII)"
+            "Fundo Imobiliário (FII)"
         
         ]
     }
 
 }
 
-========= INFORMAÇÕES FINANCEIRAS info_financeira.json: =========
-
-{
-  "CDI": {
-    "nome": "Certificado de Depósito Interbancário",
-    "descricao": "O CDI é a taxa média das operações de empréstimo entre bancos. As instituições financeiras emprestam dinheiro entre si diariamente para fechar o caixa. No fim do dia, a média dessas operações determina a taxa CDI.",
-    "relacao_selic": "Se um banco não conseguir captar recursos no mercado interbancário, ele usa a taxa Selic Over como referência. Por isso, o CDI acompanha a Selic muito de perto.",
-    "usos": [
-      "Referência para investimentos de renda fixa",
-      "Cálculo de rendimento de CDBs, LCIs, LCAs e fundos DI",
-      "Indicador para operações interbancárias"
-    ]
-  },
-
-  "SELIC": {
-    "nome": "Sistema Especial de Liquidação e Custódia",
-    "descricao": "A taxa Selic é a taxa básica de juros da economia brasileira, definida pelo Banco Central.",
-    "funcao": "Serve como principal referência para todas as taxas de juros do país, influenciando crédito, financiamentos e investimentos.",
-    "tipos": [
-      "Selic Meta — definida pelo Copom",
-      "Selic Over — taxa efetiva das operações garantidas por títulos públicos"
-    ]
-  },
-
-  "IPCA":{
-    "nome": "Índice Nacional de Preços ao Consumidor Amplo",
-    "descricao": "é o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE desde 1979. Ele mede a variação de preços de produtos e serviços consumidos por famílias com rendimentos de 1 a 40 salários mínimos, abrangendo cerca de 90% da população urbana. É a referência para as metas de inflação do Banco Central. ",
-    "usos": [
-        "É a referência oficial utilizada pelo Conselho Monetário Nacional (CMN) para definir as metas de inflação que o Banco Central do Brasil deve seguir.",
-        "Serve como base para a correção anual de contratos, incluindo aluguéis, planos de saúde, mensalidades escolares e tarifas públicas.",
-        "É o indexador de títulos de renda fixa 'híbridos', como o Tesouro IPCA+, garantindo que o rendimento supere a inflação e mantenha o poder de compra.",
-        "Analistas e governos utilizam o IPCA para medir a saúde econômica do país e o impacto no custo de vida das famílias (com rendimentos de 1 a 40 salários mínimos). "
-    ]
-  },
-
-  "Liquidez_diaria": {
-    "descricao": "Liquidez diária, ou imediata, é a capacidade de resgatar um investimento a qualquer momento em dias úteis, com o dinheiro disponível na conta no mesmo dia (D+0) ou no próximo (D+1). É o ideal para reservas de emergência e objetivos de curto prazo, oferecendo alta segurança, flexibilidade e rentabilidade diária, sem carência. ",
-    "caracteristicas": [
-        "Resgate Rápido: Acesso ágil ao capital, sem necessidade de esperar vencimentos ou carências.",
-        "Ideal para Emergências: Perfeito para construir a reserva de emergência, permitindo uso imediato em imprevistos.",
-        "Rendimento: Diferente da conta corrente, o dinheiro continua rendendo proporcionalmente a cada dia, geralmente atrelado ao CDI. "
-    ]
-  },
-
-    "FGC":{
-        "nome": "Fundo Garantidor de Crédito",
-        "descricao": "O Fundo Garantidor de Créditos (FGC) é uma associação civil privada, sem fins lucrativos, que atua como um seguro para depositantes e investidores no Brasil. Ele protege até R$ 1 milhão, a cada 4 anos, em caso de falência ou intervenção do Banco Central em bancos associados. ",
-        "principais_aspectos": [
-            "Objetivo: Aumentar a confiança e estabilidade do Sistema Financeiro Nacional, protegendo correntistas e investidores.",
-            "Produtos Cobertos: Depósitos à vista (conta corrente), poupança, CDBs, RDBs, LC, LH, LCI, LCA e LCD.",
-            "Cobertura: R$ 250.000,00 por CPF ou CNPJ, por conjunto de instituições do mesmo conglomerado financeiro.",
-            "Funcionamento: Financiar a proteção através de contribuições mensais dos bancos associados, não utilizando recursos públicos.",
-            "Prazo de Pagamento: Geralmente ágil, com médias recentes reduzidas para poucos dias úteis após a lista de credores ser fornecida pelo interveniente. "
-        ]
-    },
-
-    "Fundo_de_investimento": {
-        "descricao": "Um fundo de investimento é uma forma coletiva de aplicação financeira, funcionando como um 'condomínio' onde diversos investidores (cotistas) unem recursos para aplicar em ativos como ações, renda fixa, imóveis ou câmbio. Geridos por profissionais, oferecem diversificação, praticidade e acesso a diferentes mercados, com rendimentos proporcionais às cotas possuídas.",
-        "caracteristicas": [
-            "Cotistas: Os investidores compram cotas, representando uma fração do patrimônio total.",
-            "Custos: Geralmente, cobram taxa de administração (gestão) e, em alguns casos, taxa de performance (para resultados acima do esperado).",
-            "Regulação: São fiscalizados pela Comissão de Valores Mobiliários (CVM). "
-        ],
-        "tipificacao":  [
-            "Renda fixa, Cambial, Multimercados, Ações, Incentivados em infraestrutura e Garantia de locação imobiliária, Fundo Imobiliário"
-        ],
-        "vantagem": "Diversificação imediata, gestão profissional, facilidade de acesso, liquidez (em fundos abertos) e diversificação de riscos.",
-        "custos": [
-            "Taxa de Administração: Taxa fixa, expressa em percentual ao ano, cobrada e deduzida diariamente do patrimônio líquido da classe. A cobrança de taxa de administração afeta o valor da cota. ",
-            "Taxa de entrada ou ingresso: taxa paga pelo cotista ao patrimônio da classe ao aplicar recursos em uma classe de cotas, pouco utilizada. ",
-            "Taxa de saída: taxa paga pelo cotista ao patrimônio da classe ao resgatar recursos de uma classe de cotas, também é pouco utilizada. ",
-            "Taxa de distribuição de cotas: taxa cobrada do fundo, representativa do montante total para remuneração dos distribuidores.",
-            "Taxa de gestão: taxa cobrada do fundo para remunerar o gestor e os prestadores de serviços por ele contratados e que não constituam encargos do fundo.",
-            "Taxa de performance: possibilidade de cobrança dessa taxa pelo gestor, percentual cobrado em razão do resultado positivo da classe. Só é cobrada quando o fundo tiver uma performance muito boa."
-        ],
-        "prestadores_de_servico": [
-            "Administrador",
-            "Gestor",
-            "Distribuidor",
-            "Tesouraria",
-            "Custodiante / Escriturador",
-            "Auditor independente"
-        ],
-        "fundo_imobiliario": {
-            "descricao": "Os Fundos Imobiliários (FII) são fundos de investimento fechados destinados à aplicação em empreendimentos imobiliários, o que inclui, além da aquisição de direitos reais sobre bens imóveis, o investimento em títulos relacionados ao mercado imobiliário como, por exemplo, LCI e CRI. ",
-            "caracteristicas": [
-                "São fundos fechados que podem ter duração determinada ou indeterminada",
-                "Objeto de oferta pública na emissão. Então, quando o FII vai emitir novas cotas, já que é um fundo fechado, passa por todo o processo de oferta pública (registro na CVM, consórcio de distribuição ...)",
-                "Pode ser negociado na bolsa de valores ou mercado de balcão."
-            ]
-        }
-        
-    },
-    
-    "Administrador": {
-        "descricao": "O administrador de fundos de investimento é a instituição responsável legalmente pela constituição, funcionamento, fiscalização e conformidade regulatória do fundo perante a CVM (Comissão de Valores Mobiliários, garantindo os direitos dos cotistas.",
-        "pode_contratar": [
-            "Serviço de Tesouraria (cuidar do caixa do fundo)",
-            "Escrituração de cotas (instituição que irá controlar o registro das cotas, também chamado de custodiante).",
-            "Auditoria independente: contratação obrigatória, irá fazer a auditoria das demonstrações contábeis do fundo."  
-        ],
-        "atribuicoes": [
-            "Supervisionar as operações realizadas pelo gestor, se está de acordo com a política de investimento da classe e dentro dos limites de concentração.",
-            "Gestão do risco de liquidez do fundo, que deve ser feita em conjunto com o gestor de recursos (anota isso aqui tá? É muito importante).",
-            "Observar as disposições constantes do regulamento.",
-            "Apreçamento dos ativos que compõem a carteira dos veículos de investimento.",
-            "Cumprir as deliberações da assembleia de cotistas. O administrador é quem administra o fundo, ele não é dono do fundo, portanto ele precisa seguir as regras.",
-            "Manter atualizada junto à CVM a lista de todos os prestadores de serviços contratados pelo fundo e as demais informações cadastrais do fundo e suas classes de cotas.",
-            "Diligenciar para que sejam mantidos, atualizados e em perfeita ordem: o registro de cotistas; o livro de atas das assembleias gerais; o livro ou lista de presença de cotistas; os pareceres do auditor independente e os registros contábeis referentes às operações e ao patrimônio do fundo.",
-            "O administrador é responsável por publicar, em seu site na internet, todas as informações relevantes do fundo de investimento."
-        ]
-    },
-
-    "Gestor": {
-        "descricao": "O gestor de fundos é o profissional responsável por administrar os recursos de terceiros em fundos de investimento, tomando decisões estratégicas de compra, venda e alocação de ativos (ações, renda fixa, imóveis) para maximizar retornos, seguindo o regulamento do fundo. Eles analisam o mercado, gerenciam riscos e definem a estratégia, seja ela ativa (bater o índice) ou passiva (replicar o índice). ",
-        "pode_contratar": [
-            "Distribuidor: responsável por vender as cotas do fundo de investimento a mercado.",
-            "Classificadora de risco: uma agência classificadora de risco irá classificar o risco do emissor de determinado título de crédito",
-            "Cogestão da carteira: contratar um outro gestor, sendo comum em fundos que possuem muitas classes de cotas. Então cada gestor cuida de uma classe de cotas por exemplo"
-        ],
-        "atribuicoes": [
-            "Responsável pela observância dos limites de composição e concentração de carteira e de concentração em fatores de risco.",
-            "Fornecer aos distribuidores todo o material de divulgação da classe de cotas.",
-            "Informar aos distribuidores qualquer alteração que ocorra na classe, especialmente se decorrente da mudança do regulamento",
-            "Comunicar a CVM o fechamento de cotas para resgate (sim, as vezes o fundo pode fechar para resgate. Mas veremos mais detalhes depois)",
-            "Exercer o direito de voto decorrente de ativos detidos pela classe. Por exemplo se o gestor comprou as ações da empresa T2SA3, na assembleia de acionista dessa empresa, o gestor pode votar representando o interesse do fundo.",
-            "Manter atualizada a documentação relativa às operações da classe de cotas",
-            "Gestão de risco dos veículos de investimento, incluindo, mas não se limitando, pela gestão do risco de liquidez em conjunto com o administrador fiduciário",
-            "Garantir que as operações realizadas pelos veículos de investimento (Fundo de Investimento) tenham sempre propósitos econômicos compatíveis com os documentos dos veículos de investimento, e estejam em consonância com os princípios gerais de conduta previstos no código de administração e gestão de recursos de terceiros da Anbima.",
-            "Manter a carteira de ativos enquadrada aos limites de composição e concentração e, se for o caso, de exposição ao risco de capital",
-            "Cumprir as deliberações da assembleia de cotistas"
-        ]
-    }
-  
-}
 
 ========= TRIBUTAÇÃO tributacao_financeira.json =========
 
 {
   "IR_Renda_Fixa":{
     "nome": "Imposto de Renda",
-    "descricao": "os investimentos de Renda Fixa são tributados com Imposto de Renda (IR), a cobrança desse tributo será feita conforme uma tabela regressiva",
+    "descricao": "Os investimentos de Renda Fixa são tributados com Imposto de Renda (IR), a cobrança desse tributo será feita conforme uma tabela regressiva.",
     "tabela": [
         "No período de até 180 dias a alíquota é 22,50%",
         "No período de 180 a 360 dias a alíquota é 20%",
         "No período de 361 a 700 dias a alíquota é 17,5%",
-        "No período acimda de 700 dias a alíquota é 15%"
+        "No período acima de 700 dias a alíquota é 15%"
         ],
-    "importante": "IR é cobrado sobre o rendimento líquido de IOF."
+    "importante": "O IR incide sobre o rendimento após o desconto do IOF, quando houver."
   },
 
   "IOF_Renda_Fixa":{
     "nome": "IMPOSTO SOBRE OPERAÇÕES FINANCEIRAS",
-    "descricao": "Os rendimentos obtidos em títulos de Renda Fixa, justamente por terem um prazo definido no momento do investimento, serão tributados com IR (imposto de renda) e IOF regressivo. No caso do IOF terá uma tabela que isenta o investidor a partir do 30º dia. Isto é, investimentos realizados com prazo de resgate inferior ou igual 30 dias serão tributados de acordo com Tabela Regressiva",
-    "tabela": [
-        { "dias": "1 a 6", "percentual": "96% a 80%" },
-        { "dias": "7 a 14", "percentual": "76% a 53%" },
-        { "dias": "15 a 20", "percentual": "50% a 33%" },
-        { "dias": "21 a 30", "percentual": "30% a 0%" }
+    "descricao": "Os rendimentos obtidos em títulos de Renda Fixa, justamente por terem um prazo definido no momento do investimento, serão tributados com IR (imposto de renda) e IOF regressivo. No caso do IOF terá uma tabela que isenta o investidor a partir do 30º dia. Isto é, investimentos realizados com prazo de resgate inferior ou igual 30 dias serão tributados de acordo com Tabela Regressiva.",
+    "tabela_completa": [
+      { "dia": 1,  "percentual": 96 },
+      { "dia": 2,  "percentual": 93 },
+      { "dia": 3,  "percentual": 90 },
+      { "dia": 4,  "percentual": 86 },
+      { "dia": 5,  "percentual": 83 },
+      { "dia": 6,  "percentual": 80 },
+      { "dia": 7,  "percentual": 76 },
+      { "dia": 8,  "percentual": 73 },
+      { "dia": 9,  "percentual": 70 },
+      { "dia": 10, "percentual": 66 },
+      { "dia": 11, "percentual": 63 },
+      { "dia": 12, "percentual": 60 },
+      { "dia": 13, "percentual": 56 },
+      { "dia": 14, "percentual": 53 },
+      { "dia": 15, "percentual": 50 },
+      { "dia": 16, "percentual": 46 },
+      { "dia": 17, "percentual": 43 },
+      { "dia": 18, "percentual": 40 },
+      { "dia": 19, "percentual": 36 },
+      { "dia": 20, "percentual": 33 },
+      { "dia": 21, "percentual": 30 },
+      { "dia": 22, "percentual": 26 },
+      { "dia": 23, "percentual": 23 },
+      { "dia": 24, "percentual": 20 },
+      { "dia": 25, "percentual": 16 },
+      { "dia": 26, "percentual": 13 },
+      { "dia": 27, "percentual": 10 },
+      { "dia": 28, "percentual": 6 },
+      { "dia": 29, "percentual": 3 },
+      { "dia": 30, "percentual": 0 }
     ]
     },
     
-   "tributacao_fundos_investimentos": {
+   "Tributacao_Fundos_Investimentos": {
     "descricao": "A tributação está relacionada com a tipificação. A receita federal reconhece que existem dois tipos de fundos.",
     "iof": [
-        "Fundos de renda fixa, cambial e multimercados estão sujeitos ao IOF de acordo com a tabela regressiva.",
+        "Fundos multimercados estão sujeitos ao IOF de acordo com a tabela regressiva.",
         "Fundo com carência tem alíquota de 0,5% ao dia de IOF caso o investidor resgate antes do vencimento da carência. "
         ],
         
     "aliquota_unica": [
-        "o fundo de infraestrutura, o investidor pessoa física está isento de IR e o investidor pessoa jurídica pagará uma alíquota de 15% no resgate.",
+        "O fundo de infraestrutura, o investidor pessoa física está isento de IR e o investidor pessoa jurídica pagará uma alíquota de 15% no resgate.",
         "O fundo de ações e o fundo de investimento em participações (private equity) são tributados com alíquota única de 15% no resgate. "
         ],
 
     "fundos_com_ir": {
         "curto_prazo": [
-            "prazo médio da carteira igual ou inferior a 365 dias. Sendo: Até 180 dias aliquota de 22,50% e acima de 180 dias a aliquota é 20%",
+            "Prazo médio da carteira igual ou inferior a 365 dias. Sendo: Até 180 dias aliquota de 22,50% e acima de 180 dias a aliquota é 20%.",
             "De acordo com a CVM, para ser classificado como fundo de curto prazo é necessário: Prazo médio da carteira inferior a 60 dias ou prazo máximo de vencimento do ativo inferior a 375 dias.",
             "Mas para fins de tributação, a receita federal considera que um fundo de curto prazo tem o prazo médio da carteira igual ou inferior a 365 dias. "
             ],
 
-        "longo_prazo": "prazo médio da carteira superior a 365 dias. Segue a tabela regressiva do IR.",
-        "Fundos": "Os fundos de renda fixa, cambial, multimercado e fundo de investimento em direitos creditórios, serão tributados de acordo com a tabela regressiva e o tempo de permanência do investidor"
+        "longo_prazo": "Prazo médio da carteira superior a 365 dias. Segue a tabela regressiva do IR.",
+        "Fundos": "Os fundos de renda fixa, cambial, multimercado e fundo de investimento em direitos creditórios, serão tributados de acordo com a tabela regressiva e o tempo de permanência do investidor."
         },
 
     "come_cotas": [
         "Come-cotas é o nome que se dá para uma antecipação no recolhimento do Imposto de Renda em classes de cotas de renda fixa, cambial e multimercados do tipo aberto. Em outras palavras, o fundo de investimento recolhe o IR da valorização das cotas a cada 6 meses, independentemente do resgate.",
         "Será cobrada sempre nos últimos dias úteis de maio e novembro.",
-        "Será cobrada SEMPRE uma alíquota fixa (classe de curto prazo, 20%; classe de longo prazo, 15%)",
+        "Será cobrada SEMPRE uma alíquota fixa (classe de curto prazo, 20%; classe de longo prazo, 15%).",
         "Recolhida pelo administrador",
         "Exceção: Classes de cota que têm carência para resgate maior que 90 dias o come cotas será cobrado no vencimento da carência. "
         ],
     
     "fundo_imobiliario": [
-        "Ganho de capital: 20% para PF, PJ e até mesmo para PJ isento. Recolhido pelo próprio investidor via DARF. O investidor terá até o último dia útil do mês subsequente para realizar o recolhimento",
+        "Ganho de capital: A alíquota é de 20% para pessoa física, pessoa jurídica e até para PJ isenta. O imposto deve ser recolhido pelo próprio investidor via DARF, até o último dia útil do mês subsequente ao da operação.",
         "Rendimento (dividendo): isento de IR para PF, PJ é 20%, retido na fonte. "
         ]
     }
 
 }
-
 
 ```
 
@@ -527,6 +570,8 @@ PRODUTOS:
 - Tesouro Renda+
 - Tesouro Educa+
 - CDB Liquidez Diário
+- CDB 6 meses
+- CDB 1 ano
 - LCI/LCA
 - Fundo Imobiliario (FII)
 - Fundo Multimercado
