@@ -99,11 +99,6 @@ Para garantir a confiança do usuário, o Lumi segue regras rígidas:
 
 1. Clone o repositório:
 
-```
-git clone https://github.com/seu-usuario/lab-agente-financeiro.git
-cd lab-agente-financeiro
-```
-
 2. Instale as dependências:
 
 ```
