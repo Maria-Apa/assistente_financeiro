@@ -22,7 +22,7 @@
 
   "IPCA":{
     "nome": "Índice Nacional de Preços ao Consumidor Amplo",
-    "descricao": "é o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE desde 1979. Ele mede a variação de preços de produtos e serviços consumidos por famílias com rendimentos de 1 a 40 salários mínimos, abrangendo cerca de 90% da população urbana. É a referência para as metas de inflação do Banco Central. ",
+    "descricao": "É o índice oficial de inflação do Brasil, calculado mensalmente pelo IBGE desde 1979. Ele mede a variação de preços de produtos e serviços consumidos por famílias com rendimentos de 1 a 40 salários mínimos, abrangendo cerca de 90% da população urbana. É a referência para as metas de inflação do Banco Central. ",
     "usos": [
         "É a referência oficial utilizada pelo Conselho Monetário Nacional (CMN) para definir as metas de inflação que o Banco Central do Brasil deve seguir.",
         "Serve como base para a correção anual de contratos, incluindo aluguéis, planos de saúde, mensalidades escolares e tarifas públicas.",
@@ -32,11 +32,12 @@
   },
 
   "Liquidez_diaria": {
-    "descricao": "Liquidez diária, ou imediata, é a capacidade de resgatar um investimento a qualquer momento em dias úteis, com o dinheiro disponível na conta no mesmo dia (D+0) ou no próximo (D+1). É o ideal para reservas de emergência e objetivos de curto prazo, oferecendo alta segurança, flexibilidade e rentabilidade diária, sem carência. ",
+    "descricao": "Liquidez diária, ou imediata, é a capacidade de resgatar um investimento a qualquer momento ou dias úteis, dependendo da instituição, com o dinheiro disponível na conta no mesmo dia (D+0) ou no próximo (D+1). É o ideal para reservas de emergência e objetivos de curto prazo, oferecendo alta segurança, flexibilidade e rentabilidade diária, sem carência. ",
     "caracteristicas": [
         "Resgate Rápido: Acesso ágil ao capital, sem necessidade de esperar vencimentos ou carências.",
         "Ideal para Emergências: Perfeito para construir a reserva de emergência, permitindo uso imediato em imprevistos.",
-        "Rendimento: Diferente da conta corrente, o dinheiro continua rendendo proporcionalmente a cada dia, geralmente atrelado ao CDI. "
+        "Rendimento: Diferente da conta corrente, o dinheiro continua rendendo proporcionalmente a cada dia, geralmente atrelado ao CDI. ",
+        "Alguns produtos possuem liquidez diária mas com prazo de cotização, especialmente fundos."
     ]
   },
 
@@ -45,7 +46,7 @@
         "descricao": "O Fundo Garantidor de Créditos (FGC) é uma associação civil privada, sem fins lucrativos, que atua como um seguro para depositantes e investidores no Brasil. Ele protege até R$ 1 milhão, a cada 4 anos, em caso de falência ou intervenção do Banco Central em bancos associados. ",
         "principais_aspectos": [
             "Objetivo: Aumentar a confiança e estabilidade do Sistema Financeiro Nacional, protegendo correntistas e investidores.",
-            "Produtos Cobertos: Depósitos à vista (conta corrente), poupança, CDBs, RDBs, LC, LH, LCI, LCA e LCD.",
+            "Produtos Cobertos: Depósitos à vista (conta corrente), CDBs, LCI LCA.",
             "Cobertura: R$ 250.000,00 por CPF ou CNPJ, por conjunto de instituições do mesmo conglomerado financeiro.",
             "Funcionamento: Financiar a proteção através de contribuições mensais dos bancos associados, não utilizando recursos públicos.",
             "Prazo de Pagamento: Geralmente ágil, com médias recentes reduzidas para poucos dias úteis após a lista de credores ser fornecida pelo interveniente. "
@@ -131,3 +132,4 @@
     }
   
 }
+
