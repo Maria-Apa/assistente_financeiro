@@ -149,5 +149,6 @@ streamlit run src/app.py
 │   └── ...
 └──  README.md
 ```
-
+---
+Desenvolvido por Maria Aparecida
 
