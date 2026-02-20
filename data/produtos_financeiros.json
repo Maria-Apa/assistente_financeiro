@@ -1,35 +1,39 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes",
-    "resgate": "Liquidez Diária"
-  },
-
+  "Tesouro Direto": [
     {
-    "nome": "Tesouro Renda+ Aposentadoria",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "IPCA + 7.26% a.a",
-    "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra do Tesouro para a aposentadoria",
-    "resgate": "Após 60 dias"
-  },
-
+      "nome": "Tesouro Selic",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "100% da Selic",
+      "aporte_minimo": 30.00,
+      "indicado_para": "Reserva de emergência e iniciantes",
+      "resgate": "Liquidez diária"
+    },
     {
-    "nome": "Tesouro Educa+",
-    "categoria": "renda_fixa",
-    "risco": "Mercado, Liquidez e Crédito, porém é baixo",
-    "rentabilidade": "IPCA + 7.69% a.a",
-    "aporte_minimo": 18.97,
-    "indicado_para": "Renda Extra usada para fins educacionais",
-    "resgate": "Após 60 dias"
-  },
+      "nome": "Tesouro Renda+ Aposentadoria",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "IPCA + 7.26% a.a",
+      "aporte_minimo": 18.97,
+      "indicado_para": "Reserva para quem busca guardar dinheiro para aposentadoria",
+      "resgate": "Após 60 dias"
+    },
+    {
+      "nome": "Tesouro Educa+",
+      "categoria": "renda_fixa",
+      "risco": "Mercado, Liquidez e Crédito, porém é baixo",
+      "rentabilidade": "IPCA + 7.69% a.a",
+      "aporte_minimo": 18.97,
+      "indicado_para": "Reserva para quem busca guardar dinheiro para fins educacionais",
+      "resgate": "Após 60 dias"
+    }
+  ]
+ },
   
-  {
+ {
+  "CDBs": [
+        {
     "nome": "CDB (Certificado de Depósito Bancário) Liquidez Diária",
     "categoria": "renda_fixa",
     "risco": "baixo",
@@ -37,20 +41,32 @@
     "aporte_minimo": 10.00,
     "indicado_para": "Quem busca segurança com rendimento diário",
     "resgate": "Liquidez Diária"
-  },
+   }, 
 
+   {
+    "nome":"CDB (Certificado de Depósito Bancário) 6 meses",
+    "categoria": "renda_fixa",
+    "risco":"baixo",
+    "rentabilidade":"108% do CDI (Certificado de Depósito Interbancário)",
+    "aporte_minimo": 100.00,
+    "indicado_para":"Quem busca retabilidade e guardar o dinheiro sem retirar antes do prazo",
+    "resgate": "No vencimento"
+  
+  },
 
   {
-    "nome": "CDB (Certificado de Depósito Bancário) prazo fechado 1 ano",
+    "nome":"CDB (Certificado de Depósito Bancário) 1 ano",
     "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "112% do CDI (Certificado de Depósito Interbancário)",
+    "risco":"baixo",
+    "rentabilidade":"114% do CDI (Certificado de Depósito Interbancário)",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca guardar o dinheiro com segurança, mas sem retirar o valor antes do periodo de 12 meses",
-    "resgate": "No Vencimento, prazo fechado"
+    "indicado_para":"Quem busca retabilidade e guardar o dinheiro sem retirar antes do prazo",
+    "resgate": "No vencimento"
+  }
+   ]
 
-  },
-  
+ },
+
   {
     "nome": "LCI/LCA",
     "categoria": "renda_fixa",
