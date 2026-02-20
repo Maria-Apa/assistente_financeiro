@@ -21,23 +21,18 @@ Pensando nisso, desenvolvi um assistente financeiro com o objetivo de orientar o
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
-No meu projeto, o assistente utiliza uma base de estrutura em arquivos JSON (lê-se: djêi-son), que contém informações sobre os produtos financeiros, riscos, tributação e conceitos essenciais de finanças.
+No meu projeto, o assistente utiliza uma base estruturada em arquivos JSON, que reúne informações sobre produtos financeiros, riscos, tributação e conceitos essenciais de finanças. Dessa forma, ele consegue responder às dúvidas com precisão, evitando erros e garantindo explicações alinhadas ao conteúdo disponível.
 
-Assim, ele consegue responder às dúvidas com precisão, evitando erros e garantindo explicações alinhadas ao conteúdo disponível
+Para testar o assistente, já deixei separadas algumas perguntas. Primeiro, perguntei qual tipo de investimento ele recomendaria para mim. Ao mesmo tempo, também escrevi uma segunda pergunta sobre quais investimentos seriam adequados para um perfil conservador.
+
+Assim que respondi, o assistente informou que precisa de alguns dados adicionais para fazer uma recomendação personalizada, mas também apresentou os produtos que já possui cadastrados no sistema. Quando questionei especificamente o que ele recomendaria para um perfil conservador, ele sugeriu alternativas como CDB, Tesouro Selic, LCI e LCA, destacando que são opções de menor risco e, portanto, mais adequadas a esse tipo de perfil.
+
+Na próxima pergunta, quis saber quais são os riscos ao investir em um fundo imobiliário. O assistente explicou que esse tipo de investimento envolve riscos de mercado, de liquidez, de crédito e também o risco de vacância.
 
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-O diferencial do Lumi nasce de uma experiência real.
-Quando eu trabalhava com investimentos, percebia que muitos clientes tinham vergonha de tirar dúvidas por voz ou presencialmente. Eles ficavam inseguros, achavam que suas perguntas eram “básicas demais” e, por isso, preferiam pesquisar sozinhos — muitas vezes encontrando informações vagas ou incompletas.
-
-O Lumi resolve exatamente esse problema.
-
-Ele oferece um espaço seguro, simples e acolhedor para que qualquer pessoa possa aprender sobre investimentos sem medo de julgamento. Explica tudo com clareza, utiliza apenas informações confiáveis da base em JSON e responde de forma gentil, como uma conversa tranquila por chat.
-
-Com isso, o Lumi ajuda o usuário a entender o básico antes mesmo de procurar um profissional certificado. Assim, a pessoa chega mais preparada, mais confiante e com clareza sobre o que deseja — evitando produtos inadequados e traumas financeiros.
-
-O impacto na sociedade é direto: mais educação financeira, mais autonomia e menos medo de investir.
+O grande diferencial do Lumi é transformar dúvidas que muitas pessoas têm vergonha de perguntar em respostas claras e acolhedoras. Ele ensina sem julgar e prepara o usuário para melhores decisões financeiras.
 
 ---
 
