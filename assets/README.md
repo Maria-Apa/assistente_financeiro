@@ -18,7 +18,7 @@
 ---
 
 ### Impostos
-Investi R$ 1.000 em um CDB e resgatei no 19º dia. Quais impostos pago e por quê?
+> Investi R$ 1.000 em um CDB e resgatei no 19º dia. Quais impostos pago e por quê?
 <br>
 <img width="1146" height="827" alt="image" src="https://github.com/user-attachments/assets/cca349e8-c645-426c-a0c5-5e41b99c429d" />
 
