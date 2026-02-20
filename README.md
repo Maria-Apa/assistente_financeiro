@@ -107,7 +107,7 @@ pip install streamlit openai
 
 3. Configure sua chave da API:
 
-No arquivo ```src/app.py```, substitua "SUA_CHAVE" pela sua chave da OpenAI.
+    No arquivo ```src/app.py```, substitua "SUA_CHAVE" pela sua chave da OpenAI.
 
 4. Inicie a aplicação:
 
