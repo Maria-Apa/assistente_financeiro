@@ -8,6 +8,17 @@ Ele possui capacidade para:
 - **Orientar sobre investimentos** ao invés de apenas responder perguntas
 - **Personalizar** sugestões com base no contexto/perfil de cada cliente
 - **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+- 
+---
+
+## Índice
+- O Problema
+- A Solução
+- Arquitetura do Sistema
+- Tecnologias Utilizadas
+- Base de Conhecimento
+- Segurança e Anti-Alucinação
+- Como Executar o Projeto
 
 ---
 
@@ -29,15 +40,29 @@ O Lumi atua como um guia consultivo e educativo. Através de uma linguagem acolh
 - Apresenta categorias de investimentos (CDB, Tesouro, LCI/LCA, FIIs) baseadas estritamente em uma base de dados segura.
 
 ---
-## Tecnologias Utilizadas
 
+## Arquitetura do Sistema
+
+O projeto utiliza uma estrutura de RAG (Retrieval-Augmented Generation) simplificada, onde o contexto é injetado dinamicamente no prompt com base na intenção do usuário.
+
+```flowchart TD
+    A[Cliente] -->|Pergunta via Chat| B[Interface - Streamlit]
+    B --> C{Filtro de Contexto}
+    C -->|Carrega JSONs| D[Base de Conhecimento]
+    D --> E[LLM - OpenAI]
+    E --> F[Validação de Regras]
+    F --> G[Resposta Acolhedora]
+```
+
+---
 ## Ferramentas Utilizadas
 
 | Categoria | Ferramentas |
 |-----------|-------------|
 | **LLMs** | [ChatGPT](https://chat.openai.com/)|
 | **Desenvolvimento** | [Streamlit](https://streamlit.io/)|
-| **Diagramas** | [Mermaid](https://mermaid.js.org/)|
+| **Linguagem** | Python 3|
+| **Base de Conhecimento** | JSON |
 
 ---
 
@@ -58,53 +83,40 @@ Utilizei os **dados mockados** disponíveis na pasta [`data/`](./data/) para ali
 
 ---
 
-### 3. Prompts do Agente
+### 3. Segurança e Anti-Alucinação
+Para garantir a confiança do usuário, o Lumi segue regras rígidas:
 
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+- Base Fechada: Só responde o que está nos JSONs. Se não encontrar, ele admite: "Não tenho essa informação na minha base."
+- Sem Recomendações Diretas: Ele apresenta opções, mas nunca diz "compre o ativo X".
+- Sem Simulações: Não realiza cálculos ou previsões de rentabilidade futura.
+- Foco em Finanças: Ignora perguntas fora do escopo (ex: previsão do tempo).
 
 ---
 
-### 4. Aplicação Funcional
+## Como Executar o Projeto
 
-Desenvolva um **protótipo funcional** do seu agente:
+1. Clone o repositório:
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+```
+git clone https://github.com/seu-usuario/lab-agente-financeiro.git
+cd lab-agente-financeiro
+```
 
-📁 **Pasta:** [`src/`](./src/)
+2. Instale as dependências:
 
----
+```
+pip install streamlit openai
+```
 
-### 5. Avaliação e Métricas
+3. Configure sua chave da API:
 
-Descreva como você avalia a qualidade do seu agente:
+No arquivo ```src/app.py```, substitua "SUA_CHAVE" pela sua chave da OpenAI.
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+4. Inicie a aplicação:
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
+```
+streamlit run src/app.py
+```
 ---
 
 ## Estrutura do Repositório
