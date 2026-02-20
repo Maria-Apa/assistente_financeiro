@@ -47,12 +47,13 @@ O projeto utiliza uma estrutura de RAG (Retrieval-Augmented Generation) simplifi
 
 ```mermaid
 
-    A[Cliente] -->|Pergunta via Chat| B[Interface - Streamlit]
-    B --> C{Filtro de Contexto}
-    C -->|Carrega JSONs| D[Base de Conhecimento]
-    D --> E[LLM - OpenAI]
-    E --> F[Validação de Regras]
-    F --> G[Resposta Acolhedora]
+flowchart TD
+    A[Cliente] -->|Mensagem| B[Interface - Streamlit]
+    B --> C[LLM - OpenAI]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação]
+    E --> F[Resposta]
 ```
 
 ---
