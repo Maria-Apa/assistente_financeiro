@@ -4,7 +4,7 @@
 
 ### Apresentação (15 seg)
 
-Olá, meu nome é Maria Aparecida, sou formada em Análise e Desenvolvimento de Sistemas e atualmente estou cursando uma pós-graduação em Análise de Dados e Business Intelligence. Também possuo certificação da ANBIMA.
+Olá, meu nome é Maria Aparecida, sou formada em Análise e Desenvolvimento de Sistemas e atualmente estou cursando uma pós-graduação em Banco de Dados Business Intelligence. Também possuo certificação da ANBIMA.
 
 ### 1. O Problema (32 seg)
 > Qual dor do cliente você resolve?
