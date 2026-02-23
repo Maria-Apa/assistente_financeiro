@@ -8,7 +8,6 @@ Ele possui capacidade para:
 - **Orientar sobre investimentos** ao invés de apenas responder perguntas
 - **Personalizar** sugestões com base no contexto/perfil de cada cliente
 - **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-- 
 ---
 
 ## Índice
